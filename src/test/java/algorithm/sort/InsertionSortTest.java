@@ -1,7 +1,7 @@
 package algorithm.sort;
 
 import com.jeonhwan.algorithm.sort.BubbleSort;
-import com.jeonhwan.algorithm.sort.SelectionSort;
+import com.jeonhwan.algorithm.sort.InsertionSort;
 import helper.DataGenerator;
 import org.junit.Test;
 
@@ -9,8 +9,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class BubbleSortTest {
-
+public class InsertionSortTest {
 
     @Test
     public void given_100_random_data_bubble_sort_asc_Test() {
@@ -23,8 +22,8 @@ public class BubbleSortTest {
             // copy array to track before sorted
             int[] temp = Arrays.copyOf(input_data, input_data.length);
 
-            BubbleSort bubbleSort = new BubbleSort(input_data);
-            result_data = bubbleSort.sort();
+            InsertionSort insertionSort = new InsertionSort(input_data);
+            result_data = insertionSort.sort();
 
             System.out.println("input_data:" + Arrays.toString(temp) + ", result_data: " + Arrays.toString(result_data));
 
@@ -37,10 +36,9 @@ public class BubbleSortTest {
 
     /**
      * Big O(N^2)
-     *
-    */
+     */
     @Test
-    public void basic_bubble_sort_asc_test() {
+    public void basic_insertion_sort_asc_test() {
 
         // given
         int[] input_data = {5,2,6,9,8,7,10,1,3,4};
@@ -49,8 +47,8 @@ public class BubbleSortTest {
         int[] temp = Arrays.copyOf(input_data, input_data.length);
 
         // act
-        BubbleSort bubbleSort= new BubbleSort(input_data);
-        result_data = bubbleSort.sort();
+        InsertionSort insertionSort = new InsertionSort(input_data);
+        result_data = insertionSort.sort();
 
         System.out.println("input_data:" + Arrays.toString(temp) + ", result_data: " + Arrays.toString(result_data));
 
@@ -58,5 +56,4 @@ public class BubbleSortTest {
         assertArrayEquals(expected_data, result_data);
 
     }
-
 }
