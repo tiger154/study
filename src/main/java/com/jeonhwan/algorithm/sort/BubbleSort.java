@@ -2,9 +2,6 @@ package com.jeonhwan.algorithm.sort;
 
 public class BubbleSort {
     private int[] data;
-    public void setData(int[] data) {
-        this.data = data;
-    }
 
     public BubbleSort(int[] data) {
         this.data = data;
