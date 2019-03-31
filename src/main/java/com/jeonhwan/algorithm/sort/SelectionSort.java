@@ -5,14 +5,9 @@ import java.util.Arrays;
 public class SelectionSort {
 
     private int[] data;
-
     public void setData(int[] data) {
         this.data = data;
     }
-
-    public SelectionSort() {
-    }
-
     public SelectionSort(int[] data) {
         this.data = data;
     }
