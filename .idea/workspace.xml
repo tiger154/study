@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" afterDir="false" />
+    <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="gitignore added">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,19 +34,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="36" column="121" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="121" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <caret line="36" column="121" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +43,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
               <folding>
                 <element signature="e#193#194#0" expanded="true" />
                 <element signature="e#225#226#0" expanded="true" />
@@ -72,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="72" />
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -103,6 +111,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -119,6 +128,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="study" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="study" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
@@ -144,81 +158,6 @@
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeonhwan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeonhwan" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jeonhwan" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="sort" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="sort" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -229,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554013637401" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554013989212" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -349,7 +288,7 @@
       <workItem from="1553939985651" duration="9572000" />
       <workItem from="1553950994639" duration="60000" />
       <workItem from="1554010529037" duration="1152000" />
-      <workItem from="1554011895464" duration="1723000" />
+      <workItem from="1554011895464" duration="2087000" />
     </task>
     <task id="LOCAL-00001" summary="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)">
       <created>1553946004876</created>
@@ -365,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553950706718</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. Bubble sort algorithm implement&#10;   - 버블 소트 알고리즘 구현 &#10;2. Added Test case for Bubble sort basic input data&#10;   - 버블소트 테스트 케이스 추가">
+      <created>1554013749344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554013749345</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -401,13 +347,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15031000" />
+    <option name="totallyTimeSpent" value="15395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22126746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22126746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -416,7 +362,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2779661" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.259887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5943503" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -445,7 +391,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)" />
     <MESSAGE value="1. Code clean&#10;   코드정리&#10;2. Added Big O description&#10;   빅오 표기법 내용 정리 추가 &#10;3. Added Test case for 100 random input for SelectionSort&#10;   100개의 랜덤 인풋 값을 테스트하는 케이스 추가(선택정렬)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Code clean&#10;   코드정리&#10;2. Added Big O description&#10;   빅오 표기법 내용 정리 추가 &#10;3. Added Test case for 100 random input for SelectionSort&#10;   100개의 랜덤 인풋 값을 테스트하는 케이스 추가(선택정렬)" />
+    <MESSAGE value="1. Bubble sort algorithm implement&#10;   - 버블 소트 알고리즘 구현 &#10;2. Added Test case for Bubble sort basic input data&#10;   - 버블소트 테스트 케이스 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Bubble sort algorithm implement&#10;   - 버블 소트 알고리즘 구현 &#10;2. Added Test case for Bubble sort basic input data&#10;   - 버블소트 테스트 케이스 추가" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -573,14 +520,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="72" />
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="26" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="36" column="121" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="121" />
+          <caret line="36" column="121" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -590,7 +537,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
           <folding>
             <element signature="e#193#194#0" expanded="true" />
             <element signature="e#225#226#0" expanded="true" />
@@ -600,11 +547,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="159">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
     </entry>
