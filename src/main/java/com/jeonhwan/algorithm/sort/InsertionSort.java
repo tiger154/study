@@ -40,6 +40,7 @@ public class InsertionSort {
         for (int i=1; i < data.length; i++) {
             // 2. Child right -> left: 1-0, 2 -0, ... 9 - 0 -> start 1, end 1,2..9 i && i > 0, minus condition
             //    It must be bigger then 0
+            //    This part also can be implemented with while condition
             for (int j=i; j <= i && j > 0; j--) {
                 if (data[j-1] > data[j]) {
                     // swap
