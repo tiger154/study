@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" afterDir="false" />
     </list>
@@ -31,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="-107">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,10 +43,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="23">
+              <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
               <folding>
                 <element signature="e#122#123#0" expanded="true" />
                 <element signature="e#154#155#0" expanded="true" />
@@ -61,18 +81,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
               <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -101,14 +109,14 @@
         <option value="$PROJECT_DIR$/src/test/java/domain/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/helper/DataGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" />
       </list>
     </option>
   </component>
@@ -240,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554546353666" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554546406451" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -359,7 +367,7 @@
       <workItem from="1553950994639" duration="60000" />
       <workItem from="1554010529037" duration="1152000" />
       <workItem from="1554011895464" duration="11156000" />
-      <workItem from="1554526388510" duration="13103000" />
+      <workItem from="1554526388510" duration="13404000" />
     </task>
     <task id="LOCAL-00001" summary="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)">
       <created>1553946004876</created>
@@ -431,49 +439,55 @@
       <option name="project" value="LOCAL" />
       <updated>1554021373008</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1. QuickSort algorithm implement&#10;   퀵소트 알고리즘 구현 &#10;2. Generate better test data&#10;   테스트 데이터 제너레이팅 기능 향상">
+      <created>1554546486243</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554546486243</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 18m 47s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 19m 17s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 19m 29s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 20m 28s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 20m 57s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 24s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 32s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 37s.xml">
-      <configuration name="QuickSortTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 57s.xml">
       <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="QuickSortTest - 2019.04.06 at 19h 22m 03s.xml">
       <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="QuickSortTest_given_100_random_data_quick_sort_asc_Test - 2019.04.06 at 19h 23m 52s.xml">
+      <configuration name="QuickSortTest.given_100_random_data_quick_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSortTest_given_100_random_data_bubble_sort_asc_Test - 2019.04.06 at 19h 24m 31s.xml">
+      <configuration name="BubbleSortTest.given_100_random_data_bubble_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuickSortTest_given_100_random_data_quick_sort_asc_Test - 2019.04.06 at 19h 24m 55s.xml">
+      <configuration name="QuickSortTest.given_100_random_data_quick_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSortTest_given_100_random_data_bubble_sort_asc_Test - 2019.04.06 at 19h 25m 02s.xml">
+      <configuration name="BubbleSortTest.given_100_random_data_bubble_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="QuickSortTest_given_100_random_data_quick_sort_asc_Test - 2019.04.06 at 19h 25m 07s.xml">
+      <configuration name="QuickSortTest.given_100_random_data_quick_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSortTest_given_100_random_data_bubble_sort_asc_Test - 2019.04.06 at 19h 25m 20s.xml">
+      <configuration name="BubbleSortTest.given_100_random_data_bubble_sort_asc_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSortTest_and_1_more - 2019.04.06 at 19h 25m 37s.xml">
+      <configuration name="BubbleSortTest and 1 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BubbleSortTest,given_100_random_data_bubble_sort_asc_Test_and_1_more - 2019.04.06 at 19h 25m 59s.xml">
+      <configuration name="BubbleSortTest,given_100_random_data_bubble_sort_asc_Test and 1 more" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37567000" />
+    <option name="totallyTimeSpent" value="37868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21106337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21106337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -482,7 +496,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27118644" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.042937852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4700565" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -518,7 +532,8 @@
     <MESSAGE value="1. Code clean&#10;  - 코드정리" />
     <MESSAGE value="1. Data generator refactoring to guarantee max limit array&#10;  - 데이터제너레이터 리팩토링(최대 배열에 맞춘 데이터생성 검증)" />
     <MESSAGE value="1. Code clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Code clean" />
+    <MESSAGE value="1. QuickSort algorithm implement&#10;   퀵소트 알고리즘 구현 &#10;2. Generate better test data&#10;   테스트 데이터 제너레이팅 기능 향상" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. QuickSort algorithm implement&#10;   퀵소트 알고리즘 구현 &#10;2. Generate better test data&#10;   테스트 데이터 제너레이팅 기능 향상" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -667,27 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,23 +696,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="736">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="-107">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+          <folding>
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="true" />
           </folding>
         </state>
       </provider>

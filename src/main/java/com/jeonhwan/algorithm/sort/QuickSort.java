@@ -13,11 +13,6 @@ public class QuickSort {
      * I implemented myself. It takes over 4hours with debugging
      * It was actually really hard to figure out without check reference.
      *
-     *
-     * Problem
-     *   - After it swap between bigger_left and smaller_right, I check from start element again
-     *     It should be changed as swap point should be next compare point.
-     *
      * Mistake Note
      *
      *  - Didn't set the while's exit condition
