@@ -4,6 +4,11 @@ public class QuickSort {
 
     private int[] data;
 
+
+    public int[] getData() {
+        return data;
+    }
+
     public QuickSort(int[] data) {
         this.data = data;
     }
@@ -90,6 +95,61 @@ public class QuickSort {
             }
         }
         return data;
+    }
+
+    /**
+     * This is better clean code for sure
+     *   - To avoid ArrayOutOfBoundsException, make sure find value not over array size
+     *   - On loop for looking for right side bigger value, if there is no bigger value
+     *     finish loop till end of index. And after exit the loop, make bigger_left_idx = end+1
+     *
+     * @param data_static
+     * @param start
+     * @param end
+     */
+    public void sortCleanCode(int[] data_static, int start, int end) {
+
+        if (start >= end) {
+            return;
+        }
+
+        int pivot_key = start;
+        int bigger_left_idx = start + 1;
+        int smaller_right_idx = end;
+        int temp;
+
+        while (bigger_left_idx <= smaller_right_idx) {
+            // # 1. find bigger(left -> right)
+            while (data[bigger_left_idx] <= data[pivot_key] && bigger_left_idx < end) {
+                bigger_left_idx++;
+            }
+            // # 2. find smaller(right -> left)
+            while (data[smaller_right_idx] >= data[pivot_key] && smaller_right_idx > start) {
+                smaller_right_idx--;
+            }
+
+            // 3. If there is not bigger value then pivot
+            if(bigger_left_idx == smaller_right_idx) {
+                bigger_left_idx = end+1;
+            }
+
+            // if stagger swap pivot
+            if (bigger_left_idx > smaller_right_idx) {
+                // swap
+                temp = data[smaller_right_idx];
+                data[smaller_right_idx] = data[pivot_key];
+                data[pivot_key] = temp;
+            // if not swap bigger and smaller
+            } else {
+                // swap
+                temp = data[smaller_right_idx];
+                data[smaller_right_idx] = data[bigger_left_idx];
+                data[bigger_left_idx] = temp;
+            }
+        }
+
+        sortCleanCode(data, start ,smaller_right_idx-1);
+        sortCleanCode(data, smaller_right_idx+1 ,end);
     }
 
 
