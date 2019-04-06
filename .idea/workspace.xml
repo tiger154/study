@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,15 +27,52 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="189" />
+    <option name="myElementSize" value="156" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            <state relative-caret-position="297">
+              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+              <folding>
+                <element signature="e#122#123#0" expanded="true" />
+                <element signature="e#154#155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,14 +99,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/domain/Calculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/PojoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/domain/CalculatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/helper/DataGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java" />
       </list>
     </option>
   </component>
@@ -96,8 +136,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="132" />
-    <option name="y" value="415" />
+    <option name="x" value="186" />
+    <option name="y" value="111" />
     <option name="width" value="1400" />
     <option name="height" value="992" />
   </component>
@@ -107,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -160,17 +201,46 @@
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="sort" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="sort" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554021342512" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554546353666" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -194,16 +264,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in study">
-    <configuration name="All in study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BubbleSortTest,given_100_random_data_bubble_sort_asc_Test and 1 more">
+    <configuration name="BubbleSortTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="algorithm.sort.BubbleSortTest" />
+        <pattern testClass="algorithm.sort.QuickSortTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BubbleSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BubbleSortTest,given_100_random_data_bubble_sort_asc_Test and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="algorithm.sort.BubbleSortTest,given_100_random_data_bubble_sort_asc_Test" />
+        <pattern testClass="algorithm.sort.QuickSortTest,given_100_random_data_quick_sort_asc_Test" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BubbleSortTest.given_100_random_data_bubble_sort_asc_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
         <pattern>
@@ -213,43 +297,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="algorithm.sort" />
       <option name="MAIN_CLASS_NAME" value="algorithm.sort.BubbleSortTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertionSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithm.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="MAIN_CLASS_NAME" value="algorithm.sort.InsertionSortTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SelectionSortTest.given_100_random_sort_asc_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithm.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="MAIN_CLASS_NAME" value="algorithm.sort.SelectionSortTest" />
-      <option name="METHOD_NAME" value="given_100_random_sort_asc_Test" />
+      <option name="METHOD_NAME" value="given_100_random_data_bubble_sort_asc_Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algorithm.sort in study" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuickSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
         <pattern>
@@ -258,18 +312,35 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.sort.QuickSortTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickSortTest.given_100_random_data_quick_sort_asc_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithm.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="algorithm.sort" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.sort.QuickSortTest" />
+      <option name="METHOD_NAME" value="given_100_random_data_quick_sort_asc_Test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in study" />
-        <item itemvalue="JUnit.SelectionSortTest.given_100_random_sort_asc_Test" />
-        <item itemvalue="JUnit.InsertionSortTest" />
-        <item itemvalue="JUnit.BubbleSortTest" />
-        <item itemvalue="JUnit.algorithm.sort in study" />
+        <item itemvalue="JUnit.BubbleSortTest,given_100_random_data_bubble_sort_asc_Test and 1 more" />
+        <item itemvalue="JUnit.BubbleSortTest and 1 more" />
+        <item itemvalue="JUnit.BubbleSortTest.given_100_random_data_bubble_sort_asc_Test" />
+        <item itemvalue="JUnit.QuickSortTest.given_100_random_data_quick_sort_asc_Test" />
+        <item itemvalue="JUnit.QuickSortTest" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +358,8 @@
       <workItem from="1553939985651" duration="9572000" />
       <workItem from="1553950994639" duration="60000" />
       <workItem from="1554010529037" duration="1152000" />
-      <workItem from="1554011895464" duration="8825000" />
+      <workItem from="1554011895464" duration="11156000" />
+      <workItem from="1554526388510" duration="13103000" />
     </task>
     <task id="LOCAL-00001" summary="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)">
       <created>1553946004876</created>
@@ -345,48 +417,63 @@
       <option name="project" value="LOCAL" />
       <updated>1554020825217</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1. Code clean">
+      <created>1554021187140</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554021187140</updated>
+    </task>
+    <task id="LOCAL-00010" summary="1. Code clean">
+      <created>1554021373008</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1554021373008</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InsertionSortTest - 2019.03.31 at 17h 16m 20s.xml">
-      <configuration name="InsertionSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 18m 47s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest - 2019.03.31 at 17h 16m 33s.xml">
-      <configuration name="SelectionSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 19m 17s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleSortTest - 2019.03.31 at 17h 16m 41s.xml">
-      <configuration name="BubbleSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 19m 29s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleSortTest - 2019.03.31 at 17h 16m 46s.xml">
-      <configuration name="BubbleSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 20m 28s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleSortTest - 2019.03.31 at 17h 16m 52s.xml">
-      <configuration name="BubbleSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 20m 57s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="algorithm_sort_in_study - 2019.03.31 at 17h 17m 02s.xml">
-      <configuration name="algorithm.sort in study" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 24s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BubbleSortTest - 2019.03.31 at 17h 17m 15s.xml">
-      <configuration name="BubbleSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 32s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InsertionSortTest - 2019.03.31 at 17h 17m 20s.xml">
-      <configuration name="InsertionSortTest" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 37s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_given_100_random_sort_asc_Test - 2019.03.31 at 17h 22m 32s.xml">
-      <configuration name="SelectionSortTest.given_100_random_sort_asc_Test" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 21m 57s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_study - 2019.03.31 at 17h 24m 53s.xml">
-      <configuration name="All in study" configurationId="JUnit" />
+    <history-entry file="QuickSortTest - 2019.04.06 at 19h 22m 03s.xml">
+      <configuration name="QuickSortTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22133000" />
+    <option name="totallyTimeSpent" value="37567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28410313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21106337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -395,27 +482,27 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.06892655" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43615818" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27118644" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4700565" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.5299435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.4975728" visible="true" weight="0.20730397" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49830508" visible="true" weight="0.20730397" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.50242716" side_tool="true" visible="true" weight="0.20730397" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5016949" side_tool="true" visible="true" weight="0.20730397" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +517,8 @@
     <MESSAGE value="1. Code clean&#10;  - 코드정리&#10;2. Implement of Insertion sort&#10;  - 삽입정렬 구현 &#10;3. Added Test case for insertion sort&#10;  - 삽입정렬 테스트 케이스 추가" />
     <MESSAGE value="1. Code clean&#10;  - 코드정리" />
     <MESSAGE value="1. Data generator refactoring to guarantee max limit array&#10;  - 데이터제너레이터 리팩토링(최대 배열에 맞춘 데이터생성 검증)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Data generator refactoring to guarantee max limit array&#10;  - 데이터제너레이터 리팩토링(최대 배열에 맞춘 데이터생성 검증)" />
+    <MESSAGE value="1. Code clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Code clean" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -510,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/MergeSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -548,52 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -614,10 +653,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        <state relative-caret-position="1035">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
