@@ -1,5 +1,9 @@
 package com.jeonhwan.algorithm.sort;
 
+
+/**
+ * 
+ */
 public class QuickSort {
 
     private int[] data;
@@ -17,6 +21,9 @@ public class QuickSort {
     /**
      * I implemented myself. It takes over 4hours with debugging
      * It was actually really hard to figure out without check reference.
+     *
+     * Pivot rule
+     *   - Always pick most left element
      *
      * Mistake Note
      *
@@ -98,6 +105,9 @@ public class QuickSort {
     }
 
     /**
+     * Pivot pick rule
+     *   - Always pick most left element
+     *
      * This is better clean code for sure
      *   - To avoid ArrayOutOfBoundsException, make sure find value not over array size
      *   - On loop for looking for right side bigger value, if there is no bigger value
