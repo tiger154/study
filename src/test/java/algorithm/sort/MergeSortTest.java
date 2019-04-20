@@ -40,8 +40,8 @@ public class MergeSortTest {
     public void basic_merge_sort_asc_test() {
 
         // given
-        int[] input_data = {5,2,6,9,8,7,10,1,3,4};
-        int[] expected_data = {1,2,3,4,5,6,7,8,9,10};
+        int[] input_data = {5,2,6,8,7,1,3,4};
+        int[] expected_data = {1,2,3,4,5,6,7,8};
         int[] result_data;
         int[] temp = Arrays.copyOf(input_data, input_data.length);
 

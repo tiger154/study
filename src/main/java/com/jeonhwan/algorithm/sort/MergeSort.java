@@ -1,6 +1,15 @@
 package com.jeonhwan.algorithm.sort;
 
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
+
+
 public class MergeSort {
+    private static Logger log = LoggerFactory.getLogger(MergeSort.class);
 
     private int[] data; // 원본 데이터
     private int[] temp; // 조작 데이터 -> 조작 데이터를 기준으로 정렬 수행후 반환한다.
@@ -89,6 +98,34 @@ public class MergeSort {
 
 
     /**
+     * Want to see stack here
+     *
+     * Stack structure.. (Left first)
+     *  - Because it's reclusive, it stack like below
+     *
+     * [1] [2] [3] [4] | [5] [6] [7] [8]    <- Fourth input (It stop here as element length is smallest)
+     * [12] [34] | [56] [78]                <- Third input
+     * [1234] | [5678]                      <- Second input
+     * [12345678]                           <- First input
+     *
+     * Calculation order
+     *
+     * (Divide)  [12345678]
+     * (Divide)  [1234] | [5678]
+     * (Divide)  [12] [34]
+     * (Divide)  [1] [2]
+     * (Conquer) [12]
+     * (Divide)  [3] [4]
+     * (Conquer) [34]
+     * (Conquer) [1234]
+     * (Divide)  [56] [78]
+     * (Divide)  [5] [6]
+     * (Conquer) [56]
+     * (Divide)  [7] [8]
+     * (Conquer) [78]
+     * (Conquer) [5678]
+     * (Conquer) [12345678]
+     *
      * 최초 시작, 마지막 인자가 필요함
      *   1) 재귀를 통한 데이터 분할
      *   2) 순차적 정복
@@ -98,16 +135,19 @@ public class MergeSort {
      * @return
      */
     public int[] sort(int start_idx, int end_idx) {
-        // 재귀 함수에는 항상 조건이 존재해야한다. 원소의 값이
+        // exit condition of reclusive (start must be smaller then end)
         if (start_idx >= end_idx) {
             return null;
         }
 
-        // 1. 분할을 한다.
-        int mid_idx = (start_idx + end_idx) / 2; // 미들 인덱스 추출
-        sort(start_idx, mid_idx);                // 왼쪽 분할
-        sort(mid_idx+1, end_idx);                  // 오른쪽 분할
-        // 2. 정복을 한다.
+        // 1. Divide
+        int mid_idx = (start_idx + end_idx) / 2;    // Get middle index
+        log.debug("## > Divide: Left ({},{}), Right({},{}) ", start_idx, mid_idx, mid_idx+1, end_idx);
+        sort(start_idx, mid_idx);                   // Left divide
+        sort(mid_idx+1, end_idx);                   // Right divide
+        // 2. Conquer
+        // - it start from start_idx = 0, end_idx = 1
+        log.debug("## < Conquer: Left ({},{}), Right({},{}) ", start_idx, mid_idx, mid_idx+1, end_idx);
         merge(start_idx, mid_idx, end_idx);
 
         return temp; // 그냥 temp 보내도 될듯?
