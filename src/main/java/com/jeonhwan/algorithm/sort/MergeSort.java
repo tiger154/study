@@ -52,6 +52,10 @@ public class MergeSort {
      *    right_idx is 2, and right_array => between 2(mid_idx+1) and 3
      *
      *
+     * Mistake note
+     *   - After sort with temp data, didnt place to original data.
+     *     It must place to original data, without it compare original data again again.
+     *
       * @param start_idx
      * @param mid_idx
      * @param end_idx
