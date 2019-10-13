@@ -21,3 +21,17 @@ This repo is for study of algorithm and data structure.
       - ex) log 2 1 = 0, log 2 2 = 1, log 2 4 = 2, log 2 32 = 5
 
 
+
+
+* Resources
+  - Even if you don't go to any of these colleges, might as well copy the curriculum at top universities, since they have proven to work and the content is mostly public anyway.
+CS61B and CS170 at UC Berkeley, 
+CS50 at Harvard, 
+6.006 at MIT, 
+15-121 at Carnegie Mellon,
+or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not sure what the're called)
+
+
+   
+* Video Tutorial Links
+  - How I Passed Coding Interviews at Facebook, Google, Lyft, Bloomberg: https://www.youtube.com/watch?v=lDTKnzrX6qU
