@@ -11,6 +11,16 @@ import java.util.*;
  *        - Put not visited elements to queue(Check as visit)
  *    3. O notation would be
  *
+ *  1) My implementation is not fancy as it just use Java's basic LinkedList for tree
+ *     - Why not good? this is strongly rely on index number based not actual node data and prev/next or neighbors..
+ *     - So it looks better to define Tree class and Graph version myself for deep understanding
+ *
+ *
+ *   It looks better to try better approach check this link
+ *      - https://www.baeldung.com/java-breadth-first-search
+ *     1) It makes tree version
+ *     2) It also makes graph version
+ *
  *
  */
 public class BfsSearch {
