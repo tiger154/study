@@ -36,3 +36,82 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
 * Video Tutorial Links
   - How I Passed Coding Interviews at Facebook, Google, Lyft, Bloomberg: https://www.youtube.com/watch?v=lDTKnzrX6qU
    
+
+#### 1. What to study(Data Structure & Algorithm)
+```
+  - 1) Iteration + Recursion
+  - 2) Arrays + Matrices
+  - 3) Linked Lists
+  - 4) Queues + Stacks + Heaps 
+  - 5) Sets + Hash Maps 
+  - 6) Trees + Binary Search
+  - 7) Graphs + DFS + BFS 
+  - 8) Tries + Sorting : 30%
+    - Merge or Quick is important 
+
+  - 1) Memorize implementation + Complexity + Big O notation    
+  - 2) Dynamic Programming
+    - Memoization(Caching)
+    - Divide - and Conquer (Big O faster)
+  - 3) Multiple Pointer, Sliding window, Greedy Algoghs
+```
+
+#### 2. Most useful Data structure
+``` 
+   1) HashMap
+   2) Queue , Stack
+   3) Sets, DFS(Depth First Searh) 
+```
+
+#### 3. Test practice 
+```
+	- Leetcode
+	- can find questions by companys , topics etc 
+	https://leetcode.com
+
+	- Data Structures sections on GeeksForGeeks:
+	1) https://www.geeksforgeeks.org/data-st...
+    2) HackerRank site 
+    3) Cracking Coding Interview - Find youtube video that is good 
+
+	Gayle Laakmann McDowell's video series on Youtube:
+	https://www.youtube.com/watch?v=GKgAV...
+
+	I 10/10 recommend this algorithms book (used at UC Berkeley for CS170): 
+	http://algorithmics.lsi.upc.edu/docs/... 
+  
+  Also algoexpert as well 
+ ``` 
+  
+  
+#### 5. How to prepare 
+```
+  1) Be experienced 
+    - Many time is not important, But How to do is more important
+    - Find If i would've known everything easier -> My own rule set
+      Make it patternize and simple 
+    (1) Mistake list  
+      - Write code before you know how to solve the problem.. This is soooo right   
+      - Multiple pointers 
+      - Frequency counting
+    (2) Thing why This Im learning would be good at Interview 
+      - White board practice to explain 
+      - Practice as realistically as possible 
+    (3) Do a lot of interview 
+      - Mock interviews
+
+  2) Know What you are doing 
+    (1) Check all you need to know and Visualize 
+       - Description of the problem
+       - Sample input outputt
+       - Constratints
+       - Whiteboard / Shared screen 
+    (2) Structure
+       1) Explain solution in plain english
+       2) Step-by-Step (bullets)
+       3) Pseduocode
+       4) Functions
+       5) Implement 
+       * Showing your resonable though process is most important 
+   3) Be Smart
+```
