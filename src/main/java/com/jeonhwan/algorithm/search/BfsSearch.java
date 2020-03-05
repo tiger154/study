@@ -26,9 +26,89 @@ import java.util.*;
 public class BfsSearch {
     // Given data, may I can implement my own Nodes structure
     private List<LinkedList<Integer>> data;
+    private TreeNode tree_node;
+    public BfsSearch() {
+
+    }
     public BfsSearch(List<LinkedList<Integer>> data) {
         this.data = data;
     }
+    public BfsSearch(TreeNode tree_node) {
+        this.tree_node = tree_node;
+    }
+
+
+    /**
+     * Binary tree
+     *   it linked itself
+     */
+
+    public static class TreeNode {
+        int data; // data value
+        TreeNode left_child;
+        TreeNode right_child;
+        public TreeNode(int data) {
+            this.data = data;
+        }
+        public int getData() {
+            return this.data;
+        }
+        public void setLeftChild(TreeNode left_child) {
+            this.left_child = left_child;
+        }
+        public void setRightChild(TreeNode right_child) {
+            this.right_child = right_child;
+        }
+        public TreeNode getLeft_child() {
+            return this.left_child;
+        }
+        public TreeNode getRight_child() {
+            return this.right_child;
+        }
+
+    }
+    public class Graph {};
+
+
+    public List<Integer> searchTree() {
+        // 1. 데이터 임시로 머무를 큐 생성
+        // 2. 최종 결과 리스트 생성
+        // 3. 방문 결과 리스트 생성
+
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        List<Integer> final_list = new ArrayList<>();
+        HashMap<Integer, Boolean> visit_map = new HashMap<>();
+
+        // 1. 먼저 최초 데이터 입력 한다.
+        queue.add(tree_node);
+        visit_map.put(tree_node.getData(), true);
+
+        // 2. 데이터가 없을때까지 반복문 진행
+        while (queue.size() > 0) {
+
+            // 2. 임시 큐에서, 큐를 추출한다.
+            TreeNode current_node = queue.poll();
+            final_list.add(current_node.getData());
+
+            // 3. 자식 노드 가 존재하는가? 그렇다면, 임시 큐에 추가한다
+            TreeNode left_child = current_node.getLeft_child();
+            TreeNode right_child = current_node.getRight_child();
+
+            // 값이 존재하고 && 한번도 방문한적이 없다면..
+            if (left_child != null && left_child.getData() > 0 && visit_map.get(left_child.getData()) == null ) {
+                queue.add(left_child);
+                visit_map.put(left_child.getData(), true);
+            }
+            if (right_child != null && right_child.getData() > 0  && visit_map.get(right_child.getData()) == null) {
+                queue.add(right_child);
+                visit_map.put(right_child.getData(), true);
+            }
+        }
+
+        System.out.println("hey there");
+        return final_list;
+    }
+
 
     public List<Integer> search(int start_index) {
 
@@ -66,12 +146,7 @@ public class BfsSearch {
                 }
             }
 
-
-
         }
-
-
-
         return final_list;
     }
 

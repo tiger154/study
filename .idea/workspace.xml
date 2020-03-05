@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,91 +27,6 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="156" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/HeapSortTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1127">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="14" column="108" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
-              <folding>
-                <element signature="e#134#135#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#815#824#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="210" column="49" lean-forward="true" selection-start-line="210" selection-start-column="49" selection-end-line="210" selection-end-column="49" />
-              <folding>
-                <element signature="e#7504#7505#0" expanded="true" />
-                <element signature="e#7558#7559#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,47 +51,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
-        <option value="$PROJECT_DIR$/src/test/java/data/PojoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/data/HashTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/domain/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/domain/PojoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/domain/CalculatorTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/helper/DataGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java" />
-        <option value="$PROJECT_DIR$/src/test/java/exam/backjune/Order2750.java" />
-        <option value="$PROJECT_DIR$/src/test/java/exam/backjune/Order2750Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/Order2750.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/Fibo1003Fastest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/Fibo1003.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/fibo/Fibo1003Fastest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/fibo/Fibo1003.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/MergeSortTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/MergeSort.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/HeapSort.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BasicTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/sort/HeapSortTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -184,43 +58,12 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="study" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1918" />
-    <option name="height" value="980" />
-  </component>
+  <component name="ProjectId" id="1YhaIcsTpb6kxEvfWfwcR37eatr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -237,19 +80,7 @@
       <recent name="D:\projects\java\study" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.BfsSearchTest.bfs_basic_test">
+  <component name="RunManager" selected="JUnit.BfsSearchTest.bfs_tree_test">
     <configuration name="BasicTest.square_calculate_Teset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <option name="PACKAGE_NAME" value="" />
@@ -276,17 +107,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapSortTest.basic_heap_sort_asc_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BfsSearchTest.bfs_tree_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithm.sort.*" />
+          <option name="PATTERN" value="algorithm.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="MAIN_CLASS_NAME" value="algorithm.sort.HeapSortTest" />
-      <option name="METHOD_NAME" value="basic_heap_sort_asc_test" />
+      <option name="PACKAGE_NAME" value="algorithm.search" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.search.BfsSearchTest" />
+      <option name="METHOD_NAME" value="bfs_tree_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -326,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BfsSearchTest.bfs_tree_test" />
         <item itemvalue="JUnit.BfsSearchTest.bfs_basic_test" />
         <item itemvalue="JUnit.HeapSortTest.test_heapify_tree" />
         <item itemvalue="JUnit.HeapSortTest.test_myself" />
         <item itemvalue="JUnit.BasicTest.square_calculate_Teset" />
-        <item itemvalue="JUnit.HeapSortTest.basic_heap_sort_asc_test" />
       </list>
     </recent_temporary>
   </component>
@@ -362,6 +193,7 @@
       <workItem from="1570949417176" duration="6448000" />
       <workItem from="1582957275059" duration="1196000" />
       <workItem from="1583060964811" duration="9751000" />
+      <workItem from="1583397202350" duration="2115000" />
     </task>
     <task id="LOCAL-00001" summary="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)">
       <created>1553946004876</created>
@@ -520,77 +352,6 @@
     <option name="localTasksCounter" value="23" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 38m 18s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 38m 30s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 38m 57s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 40m 15s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 44m 26s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 46m 59s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 47m 43s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 47m 58s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 49m 17s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BfsSearchTest_bfs_basic_test - 2020.03.01 at 22h 53m 40s.xml">
-      <configuration name="BfsSearchTest.bfs_basic_test" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110885000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21750806" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.042937852" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.042937852" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32881355" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.21807909" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49830508" visible="true" weight="0.18635875" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5016949" side_tool="true" visible="true" weight="0.20730397" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -617,460 +378,72 @@
     <MESSAGE value="BFS algo added &#10;  - Test case added&#10;  - Auto tree generator added&#10;  - It's based on Index of LinkedList&#10;     &gt; For practicing it looks better implementing Node myself" />
     <option name="LAST_COMMIT_MESSAGE" value="BFS algo added &#10;  - Test case added&#10;  - Auto tree generator added&#10;  - It's based on Index of LinkedList&#10;     &gt; For practicing it looks better implementing Node myself" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="73" key="CommitChangelistDialog2" timestamp="1583399361241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="73" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399361241" />
+    <state width="1877" height="621" key="GridCell.Tab.0.bottom" timestamp="1583399302494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="621" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
+    <state width="1877" height="621" key="GridCell.Tab.0.center" timestamp="1583399302494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="621" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
+    <state width="1877" height="621" key="GridCell.Tab.0.left" timestamp="1583399302494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="621" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
+    <state width="1877" height="621" key="GridCell.Tab.0.right" timestamp="1583399302494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="621" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
+    <state width="1877" height="303" key="GridCell.Tab.1.bottom" timestamp="1583399261043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
+    <state width="1877" height="303" key="GridCell.Tab.1.center" timestamp="1583399261043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
+    <state width="1877" height="303" key="GridCell.Tab.1.left" timestamp="1583399261043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
+    <state width="1877" height="303" key="GridCell.Tab.1.right" timestamp="1583399261043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="303" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java</url>
           <line>114</line>
-          <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="assertArrayEquals(expected_data, array)" language="JAVA" />
+      </configuration>
       <configuration name="Application">
         <watch expression="cal.memo_arr[3]" language="JAVA" />
         <watch expression="cal.memo_arr[target_case_num-1]" language="JAVA" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>input_node.stream().map(x -&gt; x.getFirst()).collect(Collectors.toList())</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.util.stream.Collectors</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>input_node.stream().map(x -&gt; x.getFirst())).collect(Collectors.toList())</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.util.stream.Collectors</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>input_node.stream().map(x -&gt; x.element()).collect(Collectors.toList())</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.util.stream.Collectors</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>input_node.stream().map(x -&gt; x.element()).toArray()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>target_data</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data.size()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(data.size() &lt; target_data)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((ArrayList) data).size</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>data.get(target_data)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>visited.get(item)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/data/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/data/HashTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/data/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/domain/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#100#101#0" expanded="true" />
-            <element signature="e#121#122#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#187#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/helper/DataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/SelectionSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/SelectionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2095">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="121" column="27" lean-forward="true" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
-          <folding>
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="method#sortJeonhwanStyle#0;class#QuickSort#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="65" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/Order2750.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/fibo/Fibo1003Fastest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/exam/backjune/fibo/Fibo1003.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/LoggerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="352" selection-start-line="352" selection-end-line="352" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/MergeSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/InsertionSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/QuickSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/CountingSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/InsertionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/exam/backjune/Order2750Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/domain/PojoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/domain/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BasicTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/MergeSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/HeapSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/BubbleSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/sort/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="70" column="80" lean-forward="true" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/AbstractSequentialList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Deque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1916">
-          <caret line="192" column="39" selection-start-line="192" selection-start-column="39" selection-end-line="192" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7781">
-          <caret line="599" column="32" selection-start-line="599" selection-start-column="27" selection-end-line="599" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="210" column="49" lean-forward="true" selection-start-line="210" selection-start-column="49" selection-end-line="210" selection-end-column="49" />
-          <folding>
-            <element signature="e#7504#7505#0" expanded="true" />
-            <element signature="e#7558#7559#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="428" selection-start-line="428" selection-end-line="428" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/algorithm/sort/HeapSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="14" column="108" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
-          <folding>
-            <element signature="e#134#135#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#815#824#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

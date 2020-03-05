@@ -31,6 +31,41 @@ public class BfsSearchTest {
     }
 
 
+    @Test
+    public void bfs_tree_test() {
+
+        // given
+        List<LinkedList<Integer>> input_node = generate_balanced_tree_data(15);
+        // first node
+        BfsSearch.TreeNode treeNode1 = new BfsSearch.TreeNode(1);
+        BfsSearch.TreeNode treeNode2 = new BfsSearch.TreeNode(2);
+        BfsSearch.TreeNode treeNode3 = new BfsSearch.TreeNode(3);
+        BfsSearch.TreeNode treeNode4 = new BfsSearch.TreeNode(4);
+        BfsSearch.TreeNode treeNode5 = new BfsSearch.TreeNode(5);
+        BfsSearch.TreeNode treeNode6 = new BfsSearch.TreeNode(6);
+        BfsSearch.TreeNode treeNode7 = new BfsSearch.TreeNode(7);
+        treeNode1.setLeftChild(treeNode2);
+        treeNode1.setRightChild(treeNode3);
+        treeNode2.setLeftChild(treeNode4);
+        treeNode2.setRightChild(treeNode5);
+        treeNode3.setLeftChild(treeNode6);
+        treeNode3.setRightChild(treeNode7);
+
+        int[] expected_data = {1,2,3,4,5,6,7};
+
+
+
+        BfsSearch bfsSearch =  new BfsSearch(treeNode1);
+        List<Integer> result_data = bfsSearch.searchTree();
+
+
+        System.out.println("input_data:" + Arrays.toString(result_data.toArray()));
+        int[] array = result_data.stream().mapToInt(i->i).toArray();
+        // assert
+        assertArrayEquals(expected_data, array);
+    }
+
+
     /**
      * Auto tree generator with LinkedList
      * @param length
