@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47bf1825-4f2c-4ebf-9a66-e6cb0c2a7ed1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/DfsSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/algorithm/search/DfsSearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java" afterDir="false" />
@@ -34,19 +34,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>FiboMemo</find>
-      <find>memo</find>
-      <find>slfj</find>
-      <find>log.</find>
-      <find>item</find>
-      <find>Node</find>
-    </findStrings>
-    <dirStrings>
-      <dir>D:\development\java\study</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,17 +67,7 @@
       <recent name="D:\projects\java\study" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BfsSearchTest.bfs_tree_test">
-    <configuration name="BasicTest.square_calculate_Teset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasicTest" />
-      <option name="METHOD_NAME" value="square_calculate_Teset" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DfsSearchTest.dfs_graph_test">
     <configuration name="BfsSearchTest.bfs_basic_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
@@ -102,6 +79,22 @@
       <option name="PACKAGE_NAME" value="algorithm.search" />
       <option name="MAIN_CLASS_NAME" value="algorithm.search.BfsSearchTest" />
       <option name="METHOD_NAME" value="bfs_basic_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BfsSearchTest.bfs_graph_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithm.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="algorithm.search" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.search.BfsSearchTest" />
+      <option name="METHOD_NAME" value="bfs_graph_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,33 +116,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapSortTest.test_heapify_tree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DfsSearchTest.dfs_graph_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithm.sort.*" />
+          <option name="PATTERN" value="algorithm.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="MAIN_CLASS_NAME" value="algorithm.sort.HeapSortTest" />
-      <option name="METHOD_NAME" value="test_heapify_tree" />
+      <option name="PACKAGE_NAME" value="algorithm.search" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.search.DfsSearchTest" />
+      <option name="METHOD_NAME" value="dfs_graph_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapSortTest.test_myself" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DfsSearchTest.dfs_tree_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithm.sort.*" />
+          <option name="PATTERN" value="algorithm.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="algorithm.sort" />
-      <option name="MAIN_CLASS_NAME" value="algorithm.sort.HeapSortTest" />
-      <option name="METHOD_NAME" value="test_myself" />
+      <option name="PACKAGE_NAME" value="algorithm.search" />
+      <option name="MAIN_CLASS_NAME" value="algorithm.search.DfsSearchTest" />
+      <option name="METHOD_NAME" value="dfs_tree_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DfsSearchTest.dfs_graph_test" />
+        <item itemvalue="JUnit.DfsSearchTest.dfs_tree_test" />
+        <item itemvalue="JUnit.BfsSearchTest.bfs_graph_test" />
         <item itemvalue="JUnit.BfsSearchTest.bfs_tree_test" />
         <item itemvalue="JUnit.BfsSearchTest.bfs_basic_test" />
-        <item itemvalue="JUnit.HeapSortTest.test_heapify_tree" />
-        <item itemvalue="JUnit.HeapSortTest.test_myself" />
-        <item itemvalue="JUnit.BasicTest.square_calculate_Teset" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +186,9 @@
       <workItem from="1570949417176" duration="6448000" />
       <workItem from="1582957275059" duration="1196000" />
       <workItem from="1583060964811" duration="9751000" />
-      <workItem from="1583397202350" duration="2115000" />
+      <workItem from="1583397202350" duration="3020000" />
+      <workItem from="1583462733887" duration="17419000" />
+      <workItem from="1583486185159" duration="1807000" />
     </task>
     <task id="LOCAL-00001" summary="1. Create Sort algorithm structure&#10;2. Added Test Case for SelectionSort(TDD)&#10;3. Created SelectionSort algorithm(Done)&#10;&#10;1. 정렬 알고리즘 개발을 위한 기본 구조 생성&#10;2. 삽입정렬 테스트 케이스 추가(TDD) 적용 &#10;3. 삽입정렬 알고리즘 개발(완료)&#10;&#10;TODO: Add more test case for SelectionSort algorithm&#10;      삽입정렬 알고리즘용 테스트케이스 추가(다양한 데이터위주)">
       <created>1553946004876</created>
@@ -349,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583071070165</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="BFS algo added &#10;  - Implement with Tree data structure">
+      <created>1583399371633</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1583399371633</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,45 +378,61 @@
     <MESSAGE value="Heap Sort base prepare(Not yet implemented logic)" />
     <MESSAGE value="Add square calculation test case" />
     <MESSAGE value="BFS algo added &#10;  - Test case added&#10;  - Auto tree generator added&#10;  - It's based on Index of LinkedList&#10;     &gt; For practicing it looks better implementing Node myself" />
-    <option name="LAST_COMMIT_MESSAGE" value="BFS algo added &#10;  - Test case added&#10;  - Auto tree generator added&#10;  - It's based on Index of LinkedList&#10;     &gt; For practicing it looks better implementing Node myself" />
+    <MESSAGE value="BFS algo added &#10;  - Implement with Tree data structure" />
+    <MESSAGE value="1. BFS comment added&#10;  - In detail about Big O notation&#10;  - BFS on Graph And BFS on Tree with List&lt;LinkedList&lt;Integer&gt;&gt;&#10;  - BFS on Tree with BinaryTree node  &#10;  &#10;2. DFS implementation with Stack   &#10;  - First made sudo code hand writing and implemented it(And works pretty well) &#10;  - I implemented with Stack(TO-DO: implement with recursive) &#10;&#10;* Added both language English &amp; Korean" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. BFS comment added&#10;  - In detail about Big O notation&#10;  - BFS on Graph And BFS on Tree with List&lt;LinkedList&lt;Integer&gt;&gt;&#10;  - BFS on Tree with BinaryTree node  &#10;  &#10;2. DFS implementation with Stack   &#10;  - First made sudo code hand writing and implemented it(And works pretty well) &#10;  - I implemented with Stack(TO-DO: implement with recursive) &#10;&#10;* Added both language English &amp; Korean" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="73" key="CommitChangelistDialog2" timestamp="1583399361241">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2472" y="76" width="1265" height="833" key="CommitChangelistDialog2" timestamp="1583487991844">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="73" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399361241" />
-    <state width="1877" height="621" key="GridCell.Tab.0.bottom" timestamp="1583399302494">
+    <state x="2472" y="76" width="1265" height="833" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583487991844" />
+    <state x="2012" y="96" width="1736" height="856" key="DiffContextDialog" timestamp="1583487801234">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583486782116" />
+    <state x="2012" y="96" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1583487801234" />
+    <state width="1877" height="410" key="GridCell.Tab.0.bottom" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="621" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
-    <state width="1877" height="621" key="GridCell.Tab.0.center" timestamp="1583399302494">
+    <state width="1877" height="410" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state width="1877" height="410" key="GridCell.Tab.0.center" timestamp="1583487218925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="621" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
-    <state width="1877" height="621" key="GridCell.Tab.0.left" timestamp="1583399302494">
+    <state width="1877" height="410" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218925" />
+    <state width="1877" height="410" key="GridCell.Tab.0.left" timestamp="1583487218925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="621" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
-    <state width="1877" height="621" key="GridCell.Tab.0.right" timestamp="1583399302494">
+    <state width="1877" height="410" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218925" />
+    <state width="1877" height="410" key="GridCell.Tab.0.right" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="621" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399302494" />
-    <state width="1877" height="303" key="GridCell.Tab.1.bottom" timestamp="1583399261043">
+    <state width="1877" height="410" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state width="1877" height="410" key="GridCell.Tab.1.bottom" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
-    <state width="1877" height="303" key="GridCell.Tab.1.center" timestamp="1583399261043">
+    <state width="1877" height="410" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state width="1877" height="410" key="GridCell.Tab.1.center" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
-    <state width="1877" height="303" key="GridCell.Tab.1.left" timestamp="1583399261043">
+    <state width="1877" height="410" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state width="1877" height="410" key="GridCell.Tab.1.left" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
-    <state width="1877" height="303" key="GridCell.Tab.1.right" timestamp="1583399261043">
+    <state width="1877" height="410" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state width="1877" height="410" key="GridCell.Tab.1.right" timestamp="1583487218926">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="303" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399261043" />
+    <state width="1877" height="410" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583487218926" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1583399373808">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583399373808" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583477283370">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1583477283370" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -425,20 +443,21 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jeonhwan/algorithm/search/BfsSearch.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/test/java/algorithm/search/DfsSearchTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/algorithm/search/BfsSearchTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/test/java/algorithm/search/DfsSearchTest.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="assertArrayEquals(expected_data, array)" language="JAVA" />
+        <watch expression="this.data" language="JAVA" />
+        <watch expression="stack.peek()" language="JAVA" />
       </configuration>
       <configuration name="Application">
         <watch expression="cal.memo_arr[3]" language="JAVA" />

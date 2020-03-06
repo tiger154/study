@@ -1,21 +1,23 @@
 package algorithm.search;
 
 import com.jeonhwan.algorithm.search.BfsSearch;
-import com.jeonhwan.algorithm.sort.HeapSort;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 import static org.junit.Assert.assertArrayEquals;
 
 public class BfsSearchTest {
 
+    /**
+     * TopDown data tree -> Edge is only one way(Not both way)
+     */
     @Test
-    public void bfs_basic_test() {
+    public void bfs_tree_test() {
 
         // given
         List<LinkedList<Integer>> input_node = generate_balanced_tree_data(15);
@@ -30,9 +32,46 @@ public class BfsSearchTest {
         assertArrayEquals(expected_data, array);
     }
 
+    /**
+     * Each node can have more then one edges.
+     */
+    @Test
+    public void bfs_graph_test() {
+
+        // given
+        LinkedList<Integer> node1 = new LinkedList<>();
+        LinkedList<Integer> node2 = new LinkedList<>();
+        LinkedList<Integer> node3 = new LinkedList<>();
+        LinkedList<Integer> node4 = new LinkedList<>();
+
+        List<LinkedList<Integer>> input_node = new ArrayList<>();
+        input_node.add(node1);
+        input_node.add(node2);
+        input_node.add(node3);
+        input_node.add(node4);
+
+        BfsSearch bfsSearch =  new BfsSearch(input_node);
+        bfsSearch.addEdge(0,1);
+        bfsSearch.addEdge(0,2);
+        bfsSearch.addEdge(1,2);
+        bfsSearch.addEdge(2,0);
+        bfsSearch.addEdge(2,3);
+        bfsSearch.addEdge(3,3);
+
+
+        int[] expected_data = {2,0,3,1};
+        List<Integer> result_data = bfsSearch.search(2);
+
+        System.out.println("input_data:" + Arrays.toString(result_data.toArray()));
+        int[] array = result_data.stream().mapToInt(i->i).toArray();
+        // assert
+        assertArrayEquals(expected_data, array);
+    }
+
+
 
     @Test
-    public void bfs_tree_test() {
+    public void bfs_one_tree_test() {
 
         // given
         List<LinkedList<Integer>> input_node = generate_balanced_tree_data(15);
@@ -52,7 +91,6 @@ public class BfsSearchTest {
         treeNode3.setRightChild(treeNode7);
 
         int[] expected_data = {1,2,3,4,5,6,7};
-
 
 
         BfsSearch bfsSearch =  new BfsSearch(treeNode1);
