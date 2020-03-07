@@ -18,9 +18,11 @@ public class HeapSortTest {
 
         HeapSort heapSort = new HeapSort(input_data);
 
-        // index 1 : 5 should be changed properly
-        //
-        heapSort.heapify(1);
+        // 1. Heapify test from specific index
+        // heapSort.heapify(1);
+
+        // 2. HeapSort Test
+        heapSort.sort();
 
         assertArrayEquals(expected_data, heapSort.getData());
         System.out.println("hey there");

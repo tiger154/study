@@ -51,8 +51,13 @@ public class HeapSort {
         // 5 / 2 - 1 = 1
         // So it's gonna work only one time
         // data : ex [11 5 8 7 4 ]
+
+        // 1. Get Left Child Index
         int left_child_index = parent_index * 2 + 1;
+        // 2. Get Right Child index
         int right_child_index = parent_index * 2 + 2;
+        // 3. If it's swaped(Heapified), we need to know which child index is swaped
+        //    So we can go down to the
         boolean is_swaped = false;
         int swaped_index = 0;
 
@@ -111,12 +116,12 @@ public class HeapSort {
 
 
         int size = data.length;
-        // But
+        // init data
         for (int parent_index = size / 2 -1 ; parent_index > 0; parent_index--) {
 
             // swap
             // heapfify  int parent_index = size / 2 -1;
-
+            heapify(parent_index);
 
         }
 
