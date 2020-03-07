@@ -9,6 +9,24 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class HeapSortTest {
 
+    @Test
+    public void max_heapify_test() {
+
+
+        int[] input_data = {11,5,8,7,4};
+        int[] expected_data = {11,7,8,5,4};
+
+        HeapSort heapSort = new HeapSort(input_data);
+
+        // index 1 : 5 should be changed properly
+        //
+        heapSort.heapify(1);
+
+        assertArrayEquals(expected_data, heapSort.getData());
+        System.out.println("hey there");
+    }
+
+
     /**
      * O(N log N)
      */
