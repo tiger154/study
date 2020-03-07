@@ -9,11 +9,20 @@ import java.util.*;
  *<br><br>
  *<h3> 1. English Description </h3>
  *<pre>
+ *     1. Depth First Search implementation
+ *       - Usually used for simulation for game
+ *     2. Big O notation
+ *       - O(V+E) or O(V^2). most of time use Adjacency list for data structure( O(V+E) )
  *</pre>
  *
  *<br><br>
  *<h3> 2. Korean Description </h3>
  *<pre>
+ *     1. 깊이 우선 검색
+ *       - 통상 게임 시뮬레이션에 자주 사용된다.
+ *     2. Bio O
+ *       - O(V+E) 또는 O(V^2) 이고, 통상 인접 리스트 데이터 O(V+E) 형으로 구현한다.
+ *
  *</pre>
  */
 public class DfsSearch {
@@ -25,6 +34,91 @@ public class DfsSearch {
     public void addEdge(int target_index, int add_index) {
         data.get(target_index).add(add_index);
     }
+    public List<Integer> getSearch_path() {return this.search_path;}
+    public List<Integer> getLeft_right_parent_list() {return this.left_right_parent_list;}
+
+    /**
+     *
+     *<br><br>
+     *<h3> 1. English Description </h3>
+     *<pre>
+     *    Search through recursive.
+     *      - Set search path
+     *      - Set Left - Right - Parent order data
+     *</pre>
+     *
+     *<br><br>
+     *<h3> 2. Korean Description </h3>
+     *<pre>
+     *   재귀 함수를 통한 간단한 구현.
+     *
+     *
+     *   1) 데이터를 시각화 한다.
+     *
+     *   0 1 2 3 4 5
+     *
+     *   0 1 2
+     *   1 3 4
+     *   2 5
+     *   3 - empty
+     *   4 - empty
+     *   5 - empty
+     *
+     *   vertices :  0 - 5 , total 5
+     *   1) left -> right -> parent
+     *          0
+     *       1     2
+     *     3  4  5
+     *
+     *   3 4 1 5 2 0
+     *
+     *
+     *
+     *</pre>
+     *
+     * @param start_index
+     * @return
+     */
+
+    List<Integer> search_path = new ArrayList<>();
+    List<Integer> left_right_parent_list = new ArrayList<>();
+    Set<Integer> visited_list = new HashSet<>();
+
+    public List<Integer> searchRecursive(int start_index) {
+        // 1. Add on search path
+        search_path.add(start_index);
+        // 2. Set as visited the index
+        visited_list.add(start_index);
+
+        // 3. Get Iterator
+        Iterator<Integer> itr = data.get(start_index).iterator();
+
+        // 4. If it has child run loop
+        if (itr.hasNext()) {
+            // To Check total child
+            int length = data.get(start_index).size();
+            // To Check if last loop of child
+            int idx = 1;
+            while (itr.hasNext()) {
+                Integer item = itr.next();
+                // 5. If never visited Go to deep with recursive
+                if(!visited_list.contains(item)) {
+                    searchRecursive(item);
+                }
+                // 6. If it's end of child loop
+                if(idx == length) {
+                    left_right_parent_list.add(start_index); // 만약 밑에 아무것도 없다면... finding last node I guess?
+                }
+                idx++;
+            }
+        } else {
+            left_right_parent_list.add(start_index); // 만약 밑에 아무것도 없다면... finding last node I guess?
+        }
+
+        return left_right_parent_list;
+    }
+
+
     /**
      *
      *<br><br>
