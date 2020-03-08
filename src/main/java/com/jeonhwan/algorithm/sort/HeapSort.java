@@ -3,6 +3,7 @@ package com.jeonhwan.algorithm.sort;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Stack;
 
 
 /**
@@ -38,6 +39,7 @@ public class HeapSort {
     private static Logger log = LoggerFactory.getLogger(HeapSort.class);
 
     private int[] data;
+    public HeapSort() {}
     public HeapSort(int[] data) {
         this.data = data;
     }
@@ -94,6 +96,8 @@ public class HeapSort {
 
 
 
+
+
     /**
      * O(N)
      *   1) Make Heap structure first
@@ -128,4 +132,6 @@ public class HeapSort {
 
         return data;
     }
+
+
 }
