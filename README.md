@@ -49,6 +49,9 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
   - 8) Tries + Sorting : 30%
     - Merge or Quick is important 
 
+  - 9) Sliding window Algorithm
+  - 10) Longest Common SubString/ Longest Common SubSequence Algorithm
+
   - 1) Memorize implementation + Complexity + Big O notation    
   - 2) Dynamic Programming
     - Memoization(Caching)
