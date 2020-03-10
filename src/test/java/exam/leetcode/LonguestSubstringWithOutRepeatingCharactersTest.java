@@ -19,7 +19,18 @@ public class LonguestSubstringWithOutRepeatingCharactersTest {
 
 
         String test = "pwwkew";
-        int longest_length = solution.lengthOfLongestSubstring(test);
+//        String test = "abcabcbb";
+//        String test = "bbbbb";
+//        String test = "dvdf";
+        // dvf
+
+        //String test = "acbeaebcdd";
+
+        int longest_length2 = solution.lengthOfLongestSubstringApproach2(test);
+        int longest_length3 = solution.lengthOfLongestSubstringLeetcode(test);
+
+
+
 
 
         System.out.println("hey");
