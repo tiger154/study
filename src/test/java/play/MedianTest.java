@@ -16,7 +16,9 @@ public class MedianTest {
 //        int[] input_odd = {1,2,3,4,5};
 //        int[] input_even = {1,2,3,4};
         int[] input_odd = {2};
-        int[] input_even = {10,15};
+        //int[] input_even = {10,15};
+        //int[] input_even = {1,3};
+        int[] input_even = {1,2,3,4,5,6};
 
         Median median = new Median();
         float median_from_odd = median.findMedianFromSortedArray(input_odd);
