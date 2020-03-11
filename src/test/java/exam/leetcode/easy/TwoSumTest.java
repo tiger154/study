@@ -1,12 +1,7 @@
-package exam.leetcode;
+package exam.leetcode.easy;
 
-import com.jeonhwan.algorithm.sort.HeapSort;
-import com.jeonhwan.exam.backjune.Order2750;
-import com.jeonhwan.exam.leetcode.TwoSum;
-import helper.DataGenerator;
+import com.jeonhwan.exam.leetcode.easy.TwoSum;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 public class TwoSumTest {
 
@@ -22,7 +17,7 @@ public class TwoSumTest {
 //      int[] indexes = twoSum.twoSum(two_sum_date, 6);
 
         int[] two_sum_date = {3,2,4};
-        twoSum.twoSum(two_sum_date, 6);
+        int[] result = twoSum.twoSum(two_sum_date, 6);
 
 
 

@@ -1,8 +1,6 @@
-package exam.leetcode;
+package exam.leetcode.medium;
 
-import com.jeonhwan.algorithm.sort.HeapSort;
-import com.jeonhwan.exam.leetcode.AddTwoNumbers;
-import com.jeonhwan.exam.leetcode.TwoSum;
+import com.jeonhwan.exam.leetcode.medium.AddTwoNumbers;
 import org.junit.Test;
 
 public class AddTwoNumbersTest {
@@ -76,7 +74,7 @@ public class AddTwoNumbersTest {
         int[] l2 = {5,5};
 
 
-        addTwoNumbers.addTwoNumbersBetterWay(toListNode(l1), toListNode(l2));
+        AddTwoNumbers.ListNode result = addTwoNumbers.addTwoNumbersBetterWay(toListNode(l1), toListNode(l2));
 
         System.out.println("hey");
     }

@@ -1,4 +1,4 @@
-package com.jeonhwan.exam.leetcode;
+package com.jeonhwan.exam.leetcode.easy;
 
 public class TwoSum {
 

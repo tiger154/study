@@ -1,7 +1,6 @@
-package exam.leetcode;
+package exam.leetcode.medium;
 
-import com.jeonhwan.exam.leetcode.AddTwoNumbers;
-import com.jeonhwan.exam.leetcode.LongestSubstringWithOutRepeatingCharacters;
+import com.jeonhwan.exam.leetcode.medium.LongestSubstringWithOutRepeatingCharacters;
 import org.junit.Test;
 
 public class LonguestSubstringWithOutRepeatingCharactersTest {
