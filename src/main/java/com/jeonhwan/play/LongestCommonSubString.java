@@ -62,6 +62,7 @@ public class LongestCommonSubString {
     public int findLongestCommonSubString(char[] a, char[] b) {
 
         int longest = 0;
+        int longest_last_index = a.length;
         // 1. metrics to draw
         int[][] metrics = new int[a.length][b.length];
 
@@ -77,7 +78,10 @@ public class LongestCommonSubString {
                          // 3.3 Set data with sum of [i-1][j-1]
                          metrics[i][j] =  metrics[i-1][j-1] + 1;
                          // 3.3 set longest data
-                         longest = (longest < metrics[i][j] ) ? metrics[i][j] : longest;
+                         if(longest < metrics[i][j]) {
+                             longest = metrics[i][j];
+                             longest_last_index = i;
+                         }
 
                      // 3.4 If it's first row or field
                      } else {
@@ -89,6 +93,10 @@ public class LongestCommonSubString {
                  }
             }
         }
+
+        String a_string = a.toString();
+
+        a_string.substring(longest_last_index - longest, longest_last_index);
 
         return longest;
     }
