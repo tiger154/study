@@ -90,12 +90,13 @@ public class LongestPalindromicSubstring_5 {
 
     /**
      * If we can use Window Slide way... it can be O(N)
-     *   - So..
+     *   It says about Longest Common Substring. N^2
+     *
      *
      * @param s
      * @return
      */
-    public String bigON(String s) {
+    public String bigONMultiple2(String s) {
 
         return "";
     }
