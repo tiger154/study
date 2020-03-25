@@ -59,10 +59,11 @@ public class LongestCommonSubString {
      * @param b
      * @return
      */
-    public int findLongestCommonSubString(char[] a, char[] b) {
+    public String findLongestCommonSubString(char[] a, char[] b) {
 
         int longest = 0;
         int longest_last_index = a.length;
+        String longest_string = "";
         // 1. metrics to draw
         int[][] metrics = new int[a.length][b.length];
 
@@ -94,11 +95,10 @@ public class LongestCommonSubString {
             }
         }
 
-        String a_string = a.toString();
+        // Get Common longest String
+        longest_string = String.valueOf(a).substring(longest_last_index - longest + 1, longest_last_index + 1);
 
-        a_string.substring(longest_last_index - longest, longest_last_index);
-
-        return longest;
+        return longest_string;
     }
 
 }

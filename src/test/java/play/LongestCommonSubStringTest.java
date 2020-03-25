@@ -7,6 +7,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LongestCommonSubStringTest {
     private static Logger log = LoggerFactory.getLogger(MergeSort.class);
 
@@ -28,17 +31,18 @@ public class LongestCommonSubStringTest {
     public void find_longest_common_substring_number() {
 
         LongestCommonSubString solution = new LongestCommonSubString();
-        String a = "GeeksforGeeks";
-        String b = "GeeksQuiz";
-        String a2 = "abcdxyz";
-        String b2 = "xyzabcd";
-        String a3 = "zxabcdezy";
-        String b3 = "yzabcdezx";
+        List<String[]> list = new ArrayList<>();
 
+        list.add(new String[]{"GeeksforGeeks", "GeeksQuiz"});
+        list.add(new String[]{"abcdxyz", "xyzabcd"});
+        list.add(new String[]{"zxabcdezy", "yzabcdezx"});
+        list.add(new String[]{"CACA", "ACAC"});
 
+        for (String[] item : list) {
+            String longestCommonSubString = solution.findLongestCommonSubString(item[0].toCharArray(), item[1].toCharArray());
+            log.debug("Result : {}, from String A: {}, B: {}", longestCommonSubString, item[0], item[1]);
+        }
 
-        int count = solution.findLongestCommonSubString(a3.toCharArray(), b3.toCharArray());
-        log.debug("TotalSubstringCount: {}", count);
         log.debug("done");
 
     }
