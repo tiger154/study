@@ -20,11 +20,35 @@ public class LongestPalindromicSubstring_5 {
 
 
     /**
+     * This is really cool using DP
+     *   - First of all Substring of a word is => n * (n + 1) / 2 => which means we need to check only triangle space on metrics
+     *     1) Rule s[i] == s[j] and metrics[i+1][j-1] is true then its palindromic (There is one thing more)
+     *     2) make start point of each character like [0][0], [1][1], [2][2], [3][3]
+     *     3) iterate i=0 till length of string
+     *          > iterate j=0 till length of string, j++
+     *              P(j, j + i) => [0,0][1,1][2,2][3,3]
+     *                          => [0,1][1,2][2,3][3,4]
+     *                          => [0,2][1,3][2,4][3,5]
+     *
+     *
+     *
+     * @param s
+     * @return
+     */
+    public String dpBigO2(String s) {
+
+
+
+        return "";
+    }
+
+
+    /**
      * Same it's over time limit...
      * @param s
      * @return
      */
-    public String lcsBigO2(String s) {
+    public String lcsBigO3(String s) {
 
         String reverse_s = "";
         String longest_string = "";
