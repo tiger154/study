@@ -7,9 +7,8 @@ import org.junit.Test;
 public class LongestPalindromicSubstring_5Test {
 
 
-
     @Test
-    public void bigOLogN_test() {
+    public void lcsBigO2() {
         LongestPalindromicSubstring_5 solution = new LongestPalindromicSubstring_5();
 
 
@@ -17,7 +16,28 @@ public class LongestPalindromicSubstring_5Test {
 //        String s = "cbbd";
 //        String s = "a";
 //        String s = "aa";
-        String s = "";
+        String s = "ac";
+//        String s = "";
+
+
+        String longest_string = solution.lcsBigO2(s);
+
+
+        System.out.println("longest: " + longest_string);
+    }
+
+
+    @Test
+    public void bigOMultiple3() {
+        LongestPalindromicSubstring_5 solution = new LongestPalindromicSubstring_5();
+
+
+//        String s = "babad";
+//        String s = "cbbd";
+//        String s = "a";
+//        String s = "aa";
+        String s = "ac";
+//        String s = "";
 
 
         String longest_string = solution.bigOMultiple3(s);

@@ -3,7 +3,101 @@ package com.jeonhwan.exam.leetcode.medium;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Approach 1.
+ *   - Longest Substring: takes O(N^2) But not
+ *   1) Make reverse
+ *   2) Make metrics with original and reverse
+ *   3) If it's matched check, palindromic
+ *      -
+ *
+ * Approach 2.
+ *   - Brute force: Pick all possible starting and ending positions for a substring, and verify if it is a palindrome
+ *   - O(N^3)
+ *
+ */
 public class LongestPalindromicSubstring_5 {
+
+
+    /**
+     * Same it's over time limit...
+     * @param s
+     * @return
+     */
+    public String lcsBigO2(String s) {
+
+        String reverse_s = "";
+        String longest_string = "";
+
+        // 1. empty check
+        if (s.length() == 0) {
+            return "";
+        }
+        if (s.length() == 1) {
+            return s;
+        }
+        // 2. reverse string ( N time)
+        for (int i =0; i< s.toCharArray().length; i++) {
+            reverse_s = reverse_s + s.charAt((s.length() - 1) - i);
+        }
+
+        if(s.equals(reverse_s)) {
+            return s;
+        }
+
+
+        char[] a = s.toCharArray();
+        char[] b = reverse_s.toCharArray();
+        int[][] metrics =  new int[a.length][b.length];
+
+        // 3. Make metrics!
+        for (int i =0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    if ( (i > 0 && j > 0) && metrics[i-1][j-1] > 0) {
+
+                        // 1. Set metrics
+                        metrics[i][j] = metrics[i-1][j-1] + 1;
+                        // 2. Check if it's palindromic
+                        // start_index and last_index
+                        int start_index = i - metrics[i][j] + 1;
+                        int last_index = i;
+                        boolean is_palindromic = true;
+                        String candidate_palindromic = "";
+
+                        for (int ii = start_index; ii <= i; ii++) {
+                            candidate_palindromic = candidate_palindromic + a[ii];
+                            // ++ --
+                            if(a[ii] != a[last_index]) {
+                                is_palindromic = false;
+                                break;
+                            }
+                            last_index--;
+                        }
+
+                        // 4. if it's a palindromic then compare longest then samp!
+                        if (is_palindromic && longest_string.length() < metrics[i][j]) {
+                            longest_string = candidate_palindromic;
+                        }
+
+                    } else {
+                        metrics[i][j] = 1;
+
+                        // If there is no value then set data
+                        if (longest_string.length() == 0) {
+                            longest_string = longest_string + a[i];
+                        }
+
+                    }
+                } else {
+                    metrics[i][j] = 0;
+                }
+            }
+        }
+
+        return longest_string;
+    }
+
 
 
     /**
@@ -40,10 +134,13 @@ public class LongestPalindromicSubstring_5 {
      *
      */
     public String bigOMultiple3(String s) {
-
+        // check if empty
         if (s.length() == 0) {
             return "";
         }
+        // check if it's same
+        // then just return all
+
 
         int longest = 0;
         int longest_start_index =0;
@@ -89,8 +186,10 @@ public class LongestPalindromicSubstring_5 {
 
 
     /**
-     * If we can use Window Slide way... it can be O(N)
-     *   It says about Longest Common Substring. N^2
+     *
+     * Next approach is
+     *
+     *
      *
      *
      * @param s
