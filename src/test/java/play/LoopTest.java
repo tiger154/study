@@ -47,4 +47,34 @@ public class LoopTest {
         }
     }
 
+    /**
+     * This loop run consecutive number time of given length.
+     *
+     * Let say given number is 6 then
+     *  It iterate -> n^2+n/2 => n * (n + 1) /2 => 6 * (6 +1) /2 => 21
+     */
+    @Test
+    public void print_index_for_substring_dp() {
+
+        int length = 6;
+
+        String num_line="";
+
+        int index = 0;
+        int hey = 6 * (6 + 1) / 2;
+
+        for(int i =0; i < length; i++) {
+            num_line = "";
+            for(int j =0; j < length - i; j++) {
+                index++;
+                num_line = num_line.concat("[").concat(String.valueOf(j)).concat("|").concat(String.valueOf(j+i)).concat("]");
+                if (j+1 == length - i) {
+                    log.debug("num_line: {}", num_line);
+                }
+            }
+        }
+
+        log.debug("done");
+    }
+
 }

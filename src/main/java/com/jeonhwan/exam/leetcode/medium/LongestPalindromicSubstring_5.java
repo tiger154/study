@@ -30,16 +30,79 @@ public class LongestPalindromicSubstring_5 {
      *                          => [0,1][1,2][2,3][3,4]
      *                          => [0,2][1,3][2,4][3,5]
      *
+     *     To improve over the brute force solution, we first observe how we can avoid unnecessary re-computation while validating palindromes.
+     *     Consider the case "ababa". If we already knew that "bab" is a palindrome, it is obvious that "ababa" must be a palindrome since
+     *     the two left and right end letters are the same.
      *
-     *
+     *     We define P(i,j)P(i,j) as following:
+     *        - P(i,j)={true,false,if the substring Si…Sj is a palindromeotherwise.
+     *     Therefore,
+     *       - P(i,j) = (P(i+1,j−1) and Si == Sj)
+     *     The base cases are:
+     *       - P(i,i)=true
+     *       - P(i,i+1)=(Si==Si+1)
      * @param s
      * @return
      */
     public String dpBigO2(String s) {
 
 
+        if(s.length() == 0) {
+            return "";
+        }
 
-        return "";
+        // So lets code about this amazing dp solution
+        char[] s_arr = s.toCharArray();
+        boolean[][] metrics = new boolean[s.length()][s.length()];
+        String longest_string = "";
+        int longest_start_index = 0;
+        int longest_end_index = 0;
+        int current_longest_length = 0;
+        // Run time   O(n^2 + n / 2)
+        // 1. iterate i=0 till length of string
+        for(int i =0; i < s_arr.length; i++) {
+
+            // 1.1 iterate j=0 till length of string - i, j++ --> So it can decrease runtime as consecutive time
+            for(int j = 0; j <s_arr.length-i; j++) {
+                // Important thing is... j, j+1 => which is comparing index, which is it can iterate
+                int start = j;
+                int end   = j+i;
+                // Rule s[i] == s[j] and metrics[i+1][j-1] is true then its palindromic (There is one thing more)
+                // Initial each char set default true.
+                // start == and or length < 2
+                // 0,4 is same but not cant find center is same
+                // 1,2 case is same but not related
+                if (s.charAt(start) == s.charAt(end) && (start == end ||  end-start == 1 )) {
+                    metrics[start][end] = true;
+                    current_longest_length = longest_end_index - longest_start_index + 1;
+                    if (current_longest_length < ((end - start) + 1)) {
+                        longest_start_index = start;
+                        longest_end_index = end;
+                    }
+                }
+
+                // Check if it's palindromic -> from center before
+                if ((end > 0) && (start < s_arr.length -1)  && s.charAt(start) == s.charAt(end) && metrics[start+1][end-1] == true ) {
+
+                    // This is palindromic
+                    metrics[start][end] = true;
+
+                    current_longest_length = longest_end_index - longest_start_index + 1;
+                    if (current_longest_length < ((end - start) + 1)) {
+                        longest_start_index = start;
+                        longest_end_index = end;
+                    }
+                }
+            }
+        }
+
+
+        // Finally get longest string! => can be N time
+        for(int i = longest_start_index; i <= longest_end_index; i++) {
+            longest_string = longest_string + s.charAt(i);
+        }
+
+        return longest_string;
     }
 
 
