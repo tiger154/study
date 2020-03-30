@@ -9,6 +9,20 @@ import java.util.LinkedList;
 public class ReversedIntegerTest {
 
     @Test
+    public void bigONWithSimpleMath() {
+
+        ReverseInteger solution = new ReverseInteger();
+        int x = 123;
+        //int x = -123;
+        //int x = 120;
+        //int x = 1463847413; // it must return 0 as over flow
+
+        int reversed = solution.bigONWithSimpleMath(x);
+        System.out.println("original: " + x  + ", reversed: " + reversed );
+    }
+
+
+    @Test
     public void bigONwithStringBuilder() {
 
         ReverseInteger solution = new ReverseInteger();
