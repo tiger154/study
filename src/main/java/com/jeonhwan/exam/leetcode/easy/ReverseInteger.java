@@ -3,6 +3,68 @@ package com.jeonhwan.exam.leetcode.easy;
 
 public class ReverseInteger {
 
+    /**
+     *
+     *
+     * <pre>
+     * Java doesn't throw overflow if sum value is over the range(The built-in integer operators do not indicate overflow or underflow in any way)
+     *
+     *   - Integer operators can throw a NullPointerException if unboxing conversion of a null reference is required
+     *   - the only integer operators that can throw an exception are the integer divide operator / and the integer remainder operator %, which throw an ArithmeticException if the right-hand operand is zero
+
+
+     * 1. ReverseInteger with simple math trick
+     *   - 1) Java doesn't throw overflow about integer operators
+     *   - 2) So add another way to solve this which compare previous result, and if not same.
+     *        It means overflow/underflow
+     *        * value (-1147483655)
+     *  link: https://www.baeldung.com/java-overflow-underflow
+     *  link: https://wiki.sei.cmu.edu/confluence/display/java/NUM00-J.+Detect+or+prevent+integer+overflow
+     *
+     *  2. Arithmetic operations can throw exception
+     * {@code
+     *   int value = Integer.MAX_VALUE-1;
+     *   for(int i = 0; i < 4; i++) {
+     *     System.out.println(value);
+     *     value = Math.addExact(value, 1);
+     *   }
+     * }
+     *
+     *
+     *  </pre>
+     *
+     * @param x
+     * @return
+     */
+    public int bigONWithSimpleMathTrick(int x) {
+
+        int result = 0;
+        int prev_result = 0;
+        int left = x;
+
+
+        // until.. left part is equal zero
+        // negative or positive in the end gonna be zero.
+        while (left != 0) {
+
+            int pop = left % 10;
+
+            // 1. push
+            result = result * 10 + pop;
+
+            if ((result - pop) / 10 != prev_result) {
+                return 0;
+            }
+
+            prev_result = result;
+
+            // 2. pop
+            left = left / 10;
+        }
+
+        return result;
+    }
+
 
     /**
      *
@@ -22,6 +84,12 @@ public class ReverseInteger {
      *
      *   result = result * 10  + (left % 10);   -- 0 + 3  , 30 + 2, 320 + 1
      *   left = left / 10;  -- set left part    -- 12 ,  1 , 0
+     *
+     *   3
+     *   32      32 - 2 / 10  = 3
+     *   321     321 - 1 / 10 = 32
+     *
+     *
      *
      *   > -123
      *
@@ -83,6 +151,7 @@ public class ReverseInteger {
 
                 // 1. push
                 result = result * 10 + pop;
+
                 // 2. pop
                 left = left / 10;
             }

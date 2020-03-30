@@ -9,13 +9,29 @@ import java.util.LinkedList;
 public class ReversedIntegerTest {
 
     @Test
-    public void bigONWithSimpleMath() {
+    public void bigONWithSimpleMathTrick() {
 
         ReverseInteger solution = new ReverseInteger();
         int x = 123;
         //int x = -123;
         //int x = 120;
         //int x = 1463847413; // it must return 0 as over flow
+
+
+        int reversed = solution.bigONWithSimpleMathTrick(x);
+        System.out.println("original: " + x  + ", reversed: " + reversed );
+    }
+
+
+    @Test
+    public void bigONWithSimpleMath() {
+
+        ReverseInteger solution = new ReverseInteger();
+        //int x = 123;
+        //int x = -123;
+        //int x = 120;
+        //int x = 1463847413; // it must return 0 as over flow
+        int x = 1534236469;
 
         int reversed = solution.bigONWithSimpleMath(x);
         System.out.println("original: " + x  + ", reversed: " + reversed );
