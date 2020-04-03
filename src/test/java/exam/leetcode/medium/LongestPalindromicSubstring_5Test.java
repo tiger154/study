@@ -1,7 +1,6 @@
 package exam.leetcode.medium;
 
 import com.jeonhwan.exam.leetcode.medium.LongestPalindromicSubstring_5;
-import com.jeonhwan.exam.leetcode.medium.MedianOfTwoSortedArrays_4;
 import org.junit.Test;
 
 public class LongestPalindromicSubstring_5Test {

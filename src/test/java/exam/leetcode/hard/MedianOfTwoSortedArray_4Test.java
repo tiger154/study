@@ -1,7 +1,6 @@
-package exam.leetcode.medium;
+package exam.leetcode.hard;
 
-import com.jeonhwan.exam.leetcode.medium.AddTwoNumbers;
-import com.jeonhwan.exam.leetcode.medium.MedianOfTwoSortedArrays_4;
+import com.jeonhwan.exam.leetcode.hard.MedianOfTwoSortedArrays_4;
 import org.junit.Test;
 
 public class MedianOfTwoSortedArray_4Test {
