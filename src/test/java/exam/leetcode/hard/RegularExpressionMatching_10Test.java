@@ -85,6 +85,98 @@ public class RegularExpressionMatching_10Test {
      * return current_status;
      *
      *
+     * ############################################
+     *
+     * pattern = rule
+     * text = string
+     * // if no rule return true if s is empty
+     * if r.length == 0 then return s.isEmpty();
+     *
+     *
+     * // iterate for r length => we can block overflow here! yes
+     * while (i < pattern.length)
+     *
+     *
+     *  1. If it's not * =>  if pattern[i] != "*"
+     *
+     *       1) if pattern[i] == '.' then
+     *          -  j++, i++
+     *
+     *       2) else if && pattern[i] == text[j]
+     *           - if its true, j++, i++
+     *           - current_status = true;
+     *          else
+     *           - i++
+     *           - current_status = false;
+     *
+     *
+     *
+     *       // If overflow of R
+     *
+     * 	  // If end of the 'r' is overflow
+     *       abc    2
+     *       ab     2(Over flow)
+     *
+     *       ab     2(Over flow)
+     *       ab     2(Over flow)
+     *
+     *    // If end of the r is not but s is overflow
+     *       ab     2(Over flow)
+     *       abc    2
+     *
+     *       3) If end of the 'pattern' and 'text' is overflow  (i == pattern.length-1) && (j >= text.length)
+     *          - then return false
+     *
+     *       4) over flow of 'pattern' (i >= pattern.length)
+     *
+     *         2) if j is overflow of 'text' then return current status
+     * 	         - if (j >= text.length) return current_status;
+     *
+     * 	       1) if j is end of 'text' then return false
+     * 	         - if (j == text.length -1) return false;
+     *
+     *
+     *       continue;
+     *
+     *
+     *
+     *
+     *     # This is killing part of this problem
+     * 	3. If it's '*' then
+     *
+     *     // s=aab, r=c*a*b*, true
+     *     1) if r[i-1] != s[j]
+     *       - i++
+     *       - current_status = true
+     *       - break;
+     *
+     * 	   2) if r[i-1] == s[j]
+     * 	       (1) if it's true j++ and compare till fail. ==> inner while!
+     * 	           - at the moment fail increase i++
+     *
+     * 	   3) if r[i-1] == '.' then
+     * 	       - just return true;
+     *
+     *
+     * 	   3) length thing
+     *
+     *
+     * 	   - we can solve this part as recruceive. I guess but need to imagine clearly in my head!     *
+     *
+     *
+     * 	* when ever it matche current_status=true if not false
+     *
+     * end while
+     *
+     *
+     * return current_status;
+     *
+     *
+     *
+     *
+     *
+     *
+     *
      */
     @Test
     public void bigON() {
