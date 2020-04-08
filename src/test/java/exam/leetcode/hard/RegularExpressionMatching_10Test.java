@@ -376,7 +376,22 @@ public class RegularExpressionMatching_10Test {
      * @return
      */
     public boolean isMatch_(String text, String pattern) {
-        if (pattern.isEmpty()) return text.isEmpty();
+
+
+        if (pattern.isEmpty()) {
+            System.out.println("pattern is empty and text " + text);
+            return text.isEmpty();
+        } else {
+            try {
+                System.out.println("text[0]: " + text.charAt(0) + ", pattern[0]: " + pattern.charAt(0) + ", text-orgin: " + text + ", pattern-origin: " + pattern);
+            } catch (Exception e) {
+                System.out.println("Overflow exception~"+ ", text-orgin: " + text + ", pattern-origin: " + pattern);
+            }
+
+        }
+
+
+
         boolean first_match = (!text.isEmpty() &&
                 (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '.'));
 
@@ -471,6 +486,42 @@ public class RegularExpressionMatching_10Test {
 
     }
 
+
+
+    @Test
+    public void rc_demo() {
+
+
+        List<String[]> list = new ArrayList<>();
+        //list.add(new String[]{"aaa","a*a","true"});
+        list.add(new String[]{"aaa","a*b","false"});
+//        list.add(new String[]{"abc","abc","true"});
+//        list.add(new String[]{"abc","ab","false"});
+//        list.add(new String[]{"ab","ab","true"});
+//        list.add(new String[]{"ab","abc","false"});
+//        list.add(new String[]{"","abc","false"});
+//        list.add(new String[]{"a","","false"});
+//        list.add(new String[]{"","","true"});
+//        list.add(new String[]{"aa","a","false"});
+
+
+        for (String[] arr: list) {
+
+            boolean result = isMatch_(arr[0], arr[1]);
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("text: ").append(arr[0])
+                    .append(", pattern: ").append(arr[1])
+                    .append(", result: ").append(result)
+                    .append(", expected: ").append(arr[2]);
+
+            System.out.println(sb.toString());
+        }
+
+
+        System.out.println("hi there");
+
+    }
 
 
 
