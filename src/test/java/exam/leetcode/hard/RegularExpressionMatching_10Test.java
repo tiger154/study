@@ -332,6 +332,14 @@ public class RegularExpressionMatching_10Test {
             if (  ( pi >= pattern.length() && pattern.charAt(pi-1) != '*' )   ||  (pi == pattern.length()-1 && pattern.charAt(pi) != '*') ) {
 
 
+                // Hm!!! shit !!
+                if (pi-2 >= 0 && pattern.charAt(pi-1) == '*' && pattern.charAt(pi-2) == pattern.charAt(pi)) {
+                    // change pj
+                    tj--;
+                    continue;
+                }
+
+
                 // 3.1 If end of the 'pattern' and 'text' is overflow
                 // ab     2 (Over flow)
                 // abc    2
@@ -361,6 +369,8 @@ public class RegularExpressionMatching_10Test {
                 if(pi >= pattern.length() && tj >= text.length()) {
                     return current_status;
                 }
+
+            // text overflow but still remain rule.. check
             }
 
         }
@@ -419,18 +429,19 @@ public class RegularExpressionMatching_10Test {
 
 
         List<String[]> list = new ArrayList<>();
-        list.add(new String[]{"aa","a","false"});
-        list.add(new String[]{"aa","a*","true"});
-        list.add(new String[]{"ab",".*","true"});
-        list.add(new String[]{"",".*","true"});
-        list.add(new String[]{"abcd",".*","true"});
-        list.add(new String[]{"abcd","e.*","false"});
-        list.add(new String[]{"aab","c*a*b*","true"});
-        list.add(new String[]{"mississippi","mis*is*p*","false"});
-        list.add(new String[]{"mississippi","mis*is*p*.","false"});
-        list.add(new String[]{"mississippi","mis*is*ip*.","true"});
-        list.add(new String[]{"ab",".*c","false"});
-        list.add(new String[]{"aaa","a*a*","true"});
+//        list.add(new String[]{"aa","a","false"});
+//        list.add(new String[]{"aa","a*","true"});
+//        list.add(new String[]{"ab",".*","true"});
+//        list.add(new String[]{"",".*","true"});
+//        list.add(new String[]{"abcd",".*","true"});
+//        list.add(new String[]{"abcd","e.*","false"});
+//        list.add(new String[]{"aab","c*a*b*","true"});
+//        list.add(new String[]{"mississippi","mis*is*p*","false"});
+//        list.add(new String[]{"mississippi","mis*is*p*.","false"});
+//        list.add(new String[]{"mississippi","mis*is*ip*.","true"});
+//        list.add(new String[]{"ab",".*c","false"});
+//        list.add(new String[]{"aaa","a*a","true"});
+        list.add(new String[]{"aaa","a*aa","true"});
 //        list.add(new String[]{"aaa","a*a","true"});
 
 
@@ -493,8 +504,14 @@ public class RegularExpressionMatching_10Test {
 
 
         List<String[]> list = new ArrayList<>();
-        //list.add(new String[]{"aaa","a*a","true"});
-        list.add(new String[]{"aaa","a*b","false"});
+//        list.add(new String[]{"a","a","true"});
+//        list.add(new String[]{"aaa","a*a","true"});
+         list.add(new String[]{"aaa","a*aaa","true"});
+//        list.add(new String[]{"","a*b","true"});
+//        list.add(new String[]{"aaa","a*b","true"});
+//        list.add(new String[]{"abcaaa","abca*a","true"});
+//        list.add(new String[]{"aaa","a*aaa*","true"});
+//        list.add(new String[]{"aaa","a*b","false"});
 //        list.add(new String[]{"abc","abc","true"});
 //        list.add(new String[]{"abc","ab","false"});
 //        list.add(new String[]{"ab","ab","true"});
