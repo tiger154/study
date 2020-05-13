@@ -119,6 +119,8 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
    3) Be Smart
 ```
 ### Etc 
+
+```
   1. Calculate 2^24 using only paper and explain thought process. 
     - link: https://m.cafe.daum.net/basicgm/KbDY/28
     1) Remember basic 
@@ -135,5 +137,5 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
        
   2. What’s the best case and worst case complexity of quick sort and merge sort?
   3. What’s the worst case complexity of an insertion in a hash table?    
-      
+```      
        
