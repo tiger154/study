@@ -118,3 +118,22 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
        * Showing your resonable though process is most important 
    3) Be Smart
 ```
+### Etc 
+  1. Calculate 2^24 using only paper and explain thought process. 
+    - link: https://m.cafe.daum.net/basicgm/KbDY/28
+    1) Remember basic 
+      - 2 squared 1 ~ 10. 
+      - 2^1=2, 2^2=4, 2^3=8, 2^4=16, 2^5=32....2^10=1024 
+    2) 1024 ≈ 1000   
+    3) If we want to know 2^15 
+      - 2^15 = 2^(10+5) = 2^10 * 2^5 
+      - We know 2^10 = 1024 ≈ 1000 
+      - And we know 2^5 = 32 
+      - So => 1000 * 32 = 32,000 can be the result(Approximation)
+    4) Now 2^24 would be => 2^(20+4) =>  2^(10+10+4)  => 2^10 * 2^10 * 2^4 
+       - 1000 * 1000 * 16 => 16,000,000 would be answer! 
+       
+  2. What’s the best case and worst case complexity of quick sort and merge sort?
+  3. What’s the worst case complexity of an insertion in a hash table?    
+      
+       
