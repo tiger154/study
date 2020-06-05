@@ -20,7 +20,9 @@ This repo is for study of algorithm and data structure.
         양의 실수 n과 실수 x에 대하여 x = log 2 n은 2x = n이라는 것과 같다.
       - ex) log 2 1 = 0, log 2 2 = 1, log 2 4 = 2, log 2 32 = 5
 
-
+  3. Algorithm solving time 
+   
+      - Practice to solve within 30min(min) ~ 40min(max). 
 
 
 * Resources
@@ -35,17 +37,23 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
    
 * Video Tutorial Links
   - How I Passed Coding Interviews at Facebook, Google, Lyft, Bloomberg: https://www.youtube.com/watch?v=lDTKnzrX6qU
-   
+
+* Interview Experience Links
+  - https://medium.com/@rodrigovillarreal/what-i-learnt-from-failing-interviews-at-google-uber-and-airbnb-part-2-4-phone-screen-33d6505de2dc   
 
 #### 1. What to study(Data Structure & Algorithm)
 ```
   - 1) Iteration + Recursion
   - 2) Arrays + Matrices
   - 3) Linked Lists
+      > Need to deep dive 
   - 4) Queues + Stacks + Heaps 
   - 5) Sets + Hash Maps 
+      > Need to deep dive 
   - 6) Trees + Binary Search
-  - 7) Graphs + DFS + BFS 
+      > Need to deep dive 
+  - 7) Graphs + DFS + BFS
+      > Need to deep dive  
   - 8) Tries + Sorting : 30%
     - Merge or Quick is important 
 
@@ -76,6 +84,7 @@ or the appropriate classes at Waterloo, Stanford, CalTech, Princeton, etc. (not 
 	1) https://www.geeksforgeeks.org/data-st...
     2) HackerRank site 
     3) Cracking Coding Interview - Find youtube video that is good 
+    4) interviewing.io
 
 	Gayle Laakmann McDowell's video series on Youtube:
 	https://www.youtube.com/watch?v=GKgAV...
