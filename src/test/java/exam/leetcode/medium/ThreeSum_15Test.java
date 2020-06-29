@@ -94,6 +94,9 @@ public class ThreeSum_15Test {
     /**
      * O(N^2)
      *
+     *    - Lets check this https://github.com/eMahtab/three-sum and prepare myself 
+     *
+     *
      * @param nums
      * @return
      */
