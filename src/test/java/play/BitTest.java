@@ -109,4 +109,12 @@ public class BitTest {
         }
         return r;
     }
+
+    @Test
+    public void testAdd() {
+        int result = addExact(3,2);
+
+
+        System.out.println("10진수:" + result + ", 2진수: " + Integer.toBinaryString(result));
+    }
 }
