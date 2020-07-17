@@ -242,11 +242,73 @@ public class BackTrackTest {
     }
 
 
+    /**
+     * Alright lets solve the problem myself now Im bit used to it about backtrack ! .
+     *
+     *  So alphabet given between 2-9
+     *  - Need to use recursive
+     *  - Need to return all paths
+     *
+     *  - Use map for digit
+     *  - Exit condition > if given next digit is null? then exit!
+     *
+     *  - Get given digit's alphabets
+     *  - loop each alphabet
+     *  - call itself with parameter
+     *    - first > path (incremented concat string)
+     *    - second > next digit.
+     *
+     *
+     *
+     */
+
+    // As constant data
+    Map<String,String> dial = new HashMap<String,String>(){{
+        put("2","ABC");
+        put("3","DEF");
+        put("4","GHI");
+        put("5","JKL");
+        put("6","MNO");
+        put("7","PQRS");
+        put("8","TUV");
+        put("9","WXYZ");
+    }};
+    List<String> combnations = new ArrayList<>();
 
 
 
+    @Test
+    public void backtrack_test() {
 
 
+        // call back track here! to see all possible path
+        backtrack_("", "2489");
+
+        for (String combination : combnations) {
+            log.debug(combination);
+        }
+
+
+    }
+
+    public void backtrack_(String path, String next) {
+        // Exit point here
+        if (next.isEmpty()) {
+            //log.debug(path);
+            combnations.add(path);
+            return;
+        }
+        String alphabets =  dial.get(next.substring(0,1));
+        // Try possible direction(which is selected alphabets only)
+        for (char alphabet  : alphabets.toCharArray()) {
+            // 1. sequently concat string
+            path = path + alphabet;
+            // 2. Call recursively for next digit
+            backtrack_(path, next.substring(1));
+            // 3. When the end of stack, remove last element
+            path = path.substring(0, path.length() -1);
+        }
+    }
 
 
 
