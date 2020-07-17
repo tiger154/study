@@ -264,14 +264,14 @@ public class BackTrackTest {
 
     // As constant data
     Map<String,String> dial = new HashMap<String,String>(){{
-        put("2","ABC");
-        put("3","DEF");
-        put("4","GHI");
-        put("5","JKL");
-        put("6","MNO");
-        put("7","PQRS");
-        put("8","TUV");
-        put("9","WXYZ");
+        put("2","abc");
+        put("3","def");
+        put("4","ghi");
+        put("5","jkl");
+        put("6","mno");
+        put("7","pqrs");
+        put("8","tuv");
+        put("9","wxyz");
     }};
     List<String> combnations = new ArrayList<>();
 
