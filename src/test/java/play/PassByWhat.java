@@ -13,7 +13,9 @@ import static org.junit.Assert.*;
  *  - But If we assign new Instance or null, it's gonna point new address.
  *  -
  *
- *
+ *  Good Link: https://jonskeet.uk/java/passing.html
+ *             - This is really good resource to understand about 'pass by value' in Java
+ *             - TODO: Gonna translate in Korean as it's really good resource but I didn't see this well explained document in Korea
  *
  *
  */
@@ -102,6 +104,37 @@ public class PassByWhat {
     // test property without changing pointer address
     public static void changeValue(Dog d) {
         d.setName("No Max");
+    }
+
+
+
+    @Test
+    public void testObjectPassing() {
+
+        Object x = null;
+        giveMeAsString(x);
+        log.debug("x: {}", x);
+
+    }
+
+    public void giveMeAsString(Object y) {
+        y = "This is a string";
+    }
+
+
+
+    @Test
+    public void testStringBufferPassing() {
+
+        StringBuffer x = new StringBuffer("Hello");
+        addWordOnStringBuffer(x);
+        log.debug("x: {}", x);
+
+    }
+
+
+    public void addWordOnStringBuffer(StringBuffer s) {
+        s.append("hey");
     }
 
 }
