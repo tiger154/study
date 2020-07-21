@@ -29,11 +29,15 @@ public class RemoveNthNodeFromList_19Test {
 
 
         RemoveNthNodeFromList_19 solution = new RemoveNthNodeFromList_19();
-        RemoveNthNodeFromList_19.ListNode result = solution.brute_force(head, 2);
+
+        RemoveNthNodeFromList_19.ListNode rst = solution.second_approach(head, 2);
+        //RemoveNthNodeFromList_19.ListNode result = solution.brute_force(head, 2);
 
        log.debug("Lets test!");
 
     }
+
+
 
 
 }
