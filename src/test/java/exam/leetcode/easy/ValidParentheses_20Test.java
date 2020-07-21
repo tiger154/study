@@ -59,7 +59,7 @@ public class ValidParentheses_20Test {
      *
      *
      *
-     * // Use queue (FIFO)
+     * // Use stack (LIFO)
      *
      * // SEARCH TO FIND OPENBRACKET
      * OPEN_BRACKET_IN_ORDER = [(,{,[ ]  --> OPEN BRACKET IN ORDER
