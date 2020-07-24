@@ -2,6 +2,7 @@ package exam.leetcode.easy;
 
 import com.jeonhwan.algorithm.sort.MergeSort;
 import com.jeonhwan.exam.leetcode.easy.RomanToInteger_13;
+import com.jeonhwan.exam.leetcode.easy.ValidParentheses_20;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,6 +71,12 @@ public class ValidParentheses_20Test {
      * If until the end the que is not empty --> then error
      *
      *
+     *
+     *  Note. First I had right direction
+     *        Second I made bit much complex, Idea was good to make N/2 times but there were too many checking logics so looks dirty
+     *           - It was dirty, but good try as it was totally unique way to solve the problem, but efficiency was low then I expected
+     *        Third - Checked other's approach, and was So simple code, and it was same direction but mine was not elegant enough
+     *
      */
     @Test
     public void test_man() {
@@ -79,168 +86,22 @@ public class ValidParentheses_20Test {
            // test strings
            List<String> strings = Arrays.asList(
                    "()"
-                   //,"()[]{}","(]","([)]","{[]}",""
+                   ,"()[]{}","(]","([)]","{[]}",""
            );
 
+
+        ValidParentheses_20 solution = new ValidParentheses_20();
             // test and check result!
            for (String s : strings) {
+
+
                //boolean rtn  = this.brute_force(s);
-               boolean rtn  = this.second_approach(s);
+               boolean rtn  = solution.third_approach(s);
                log.debug("string:{},  result: {}", s, rtn);
            }
 
     }
 
-    /**
-     * I think this is O(N) as loop as length of s
-     *   - Hm but it's so slow... how to make it faster??
-     *
-     * @param s
-     * @return
-     */
-    public boolean brute_force(String s) {
-        // if empty it's valid
-        if(s == "") {  return true;}
-        // if it's not even number its just wrong
-        if(s.length() % 2 > 0) {  return false;}
-
-        // 1. Set vars
-        Set<Character> OPEN_BRACKET = new HashSet<>(Arrays.asList('(','{','['));
-        Set<Character> CLOSE_BRACKET = new HashSet<>(Arrays.asList(')','}',']'));
-        Map<Character,Character> BRACKET_PARE = new HashMap<Character, Character>(){{
-            put('(',')');
-            put('{','}');
-            put('[',']');
-        }};
-
-        // to save open bracket found
-        Stack<Character> open_stack = new Stack<>();
-
-
-        // loop length of s
-        for (int i =0; i < s.length(); i++) {
-            // 1. if this is open bracket..
-            Character current_chr = s.charAt(i);
-            // 1. if this is open bracket
-            if (OPEN_BRACKET.contains(current_chr)) {
-                // put to stack
-                open_stack.push(s.charAt(i));
-                continue;
-            }
-            // 2. if this is close bracket
-            if (CLOSE_BRACKET.contains(current_chr)) {
-                // 2.1 check if stack is empty
-                if(open_stack.size() == 0) {return false;}
-                // 2.2
-                if (!BRACKET_PARE.get(open_stack.pop()).equals(current_chr)) {
-                    return false;
-                }
-                continue;
-            }
-        }
-
-        // if stack size is over zero, it means it failed to find matched-close bracket
-        if (open_stack.size() > 0) {
-            return false;
-        }
-
-        return true;
-    }
-
-
-    /**
-     * It can be O(n/2)
-     * @param s
-     * @return
-     */
-    public boolean second_approach(String s) {
-        // if empty it's valid
-        if(s == "") {  return true;}
-        // if it's not even number its just wrong
-        if(s.length() % 2 > 0) {  return false;}
-
-        // 1. Set vars
-        Set<Character> OPEN_BRACKET = new HashSet<>(Arrays.asList('(','{','['));
-        Set<Character> CLOSE_BRACKET = new HashSet<>(Arrays.asList(')','}',']'));
-        Map<Character,Character> BRACKET_OPEN_PARE = new HashMap<Character, Character>(){{
-            put('(',')');
-            put('{','}');
-            put('[',']');
-        }};
-        Map<Character,Character> BRACKET_CLOSE_PARE = new HashMap<Character, Character>(){{
-            put(')','(');
-            put('}','{');
-            put(']','[');
-        }};
-
-        // to save open bracket found
-        Stack<Character> open_stack = new Stack<>();
-        Stack<Character> close_stack = new Stack<>();
-
-
-
-        for (int i =0; i < s.length()/2; i++) {
-            Character left_chr = s.charAt(i);                   // left > right
-            Character right_chr = s.charAt(s.length()-(i+1));   // right > left
-
-            // left char
-            if (OPEN_BRACKET.contains(left_chr)) {
-                open_stack.push(left_chr);
-            } else if (CLOSE_BRACKET.contains(left_chr)) {
-                if(open_stack.size() == 0) {return false;}
-                if (!BRACKET_OPEN_PARE.get(open_stack.pop()).equals(left_chr)) {
-                    return false;
-                }
-            }
-
-            //  right chr
-            if (CLOSE_BRACKET.contains(right_chr)) {
-                close_stack.push(right_chr);
-            } else if (OPEN_BRACKET.contains(right_chr)) {
-                if(close_stack.size() == 0) {return false;}
-                if (!BRACKET_CLOSE_PARE.get(close_stack.pop()).equals(right_chr)) {
-                    return false;
-                }
-            }
-
-
-
-
-            // if there is left elements...
-
-            log.debug("left: {}, right:{}", left_chr, right_chr);
-        }
-
-
-//        // loop length of s
-//        for (int i =0; i < s.length(); i++) {
-//            // 1. if this is open bracket..
-//            Character current_chr = s.charAt(i);
-//            // 1. if this is open bracket
-//            if (OPEN_BRACKET.contains(current_chr)) {
-//                // put to stack
-//                open_stack.push(s.charAt(i));
-//                continue;
-//            }
-//            // 2. if this is close bracket
-//            if (CLOSE_BRACKET.contains(current_chr)) {
-//                // 2.1 check if stack is empty
-//                if(open_stack.size() == 0) {return false;}
-//                // 2.2
-//                if (!BRACKET_PARE.get(open_stack.pop()).equals(current_chr)) {
-//                    return false;
-//                }
-//                continue;
-//            }
-//        }
-//
-//        // if stack size is over zero, it means it failed to find matched-close bracket
-//        if (open_stack.size() > 0) {
-//            return false;
-//        }
-
-        return true;
-    }
 
 
 
