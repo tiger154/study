@@ -5,8 +5,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class CombinationTest {
 
@@ -91,6 +90,9 @@ public class CombinationTest {
      * Now I understand how to generate combination of nth binary value
      *
      *  Can I make this as dynamic? so.. for is dynamic... then it works.
+     *
+     *
+     *
      */
     @Test
     public void gen_binary_3depth() {
@@ -109,6 +111,8 @@ public class CombinationTest {
             }
         }
     }
+
+
 
     @Test
     public void gen_recursive() {
@@ -146,20 +150,174 @@ public class CombinationTest {
             comb[level] = 1;
             gen_bit_comb_recursive(comb, level+1, result);
         }
-
-    }
-
-
-    public boolean balance(int[] arr) {
-
-
-        return true;
-
     }
 
 
 
+    @Test
+    public void factorial_comb_test() {
+        int n = 4;                  // get factorial of 4
+        int r = 2;                  // If you want to get
+        int[] comb = new int[n];    // length setting
 
+        HashSet<Integer> sets = new HashSet<>();
+        for (int i =0; i < n; i ++) {
+            sets.add(i);
+        }
+        get_factorial_with_recursive(comb, 0,  r, sets);
+    }
+
+
+    /**
+     * It should have tracking combination parameter
+     * Need to have level(position) parameter
+     * Im not gonna return the result of them , just print out now so it doesnt matter to have result parameter
+     *
+     * Exit condition is when it hit leaf node(last level node)
+     *
+     * Wow it's beautiful!!! small code and equal time complexity! and dynamic by parameter!
+     *
+     *
+     * I can make more flexible :)
+     *
+     * comb.length = n
+     * level = is current level position
+     * r = limit or(need to be selected number)
+     *
+     */
+    public void get_factorial_with_recursive(int[] comb, int current_level, int r ,HashSet<Integer> sets) {
+
+          if (current_level == r) {
+              // need to print out the combination! here
+              log.debug("comb: {}", comb);
+          } else {
+              // iterate for given sets
+              Iterator<Integer> cpsi =  sets.iterator();
+              while (cpsi.hasNext()) {
+                  int item = cpsi.next();
+                  comb[current_level] = item;
+                  HashSet<Integer> cps2 = (HashSet<Integer>) copy_get_itr(sets, item); // need to copy as it shouldn't be
+                  get_factorial_with_recursive(comb, current_level+1, r ,cps2);
+              }
+          }
+    }
+
+
+
+    /**
+     * So n! is factorial. total number would be
+     *    n * (n - 1) * (n - 2) ... * n - (n-1)
+     *  ex) if n is 4 it would be: 4 * 3 * 2 * 1
+     *
+     *  So this I can
+     *
+     *  Time complexity is O(n!) so exactly factorial time
+     *    - I saved time through using HashSet
+     *      If I didn't used it would be O(n^n) which is worst of worst.
+     *
+     *  Now let's generate this with recursive
+     *
+     */
+    @Test
+    public void get_factorial_with_loop() {
+        // when it reach of
+
+        int n = 4;
+
+        // here if I make a map 1,2,3,4
+        int[] comb = new int[n];
+
+        // default set check --> It makes speed fast! don't have to look for all n time again
+        HashSet<Integer> sets = new HashSet<>();
+        for (int i =0; i < n; i ++) {
+            sets.add(i);
+        }
+
+
+        // 4,3,2,1 => 24
+        int level = 0;
+        for(int i = 0; i < n; i++ ) {
+            comb[level] = i;
+
+            HashSet<Integer> cps2 = (HashSet<Integer>) copy_get_itr(sets, i); // need to copy as it shouldn't be
+            Iterator<Integer> cpsi2 =  cps2.iterator();
+
+            while (cpsi2.hasNext()) {
+                int item2 = cpsi2.next();
+                comb[level+1] = item2;
+
+                HashSet<Integer> cps3 = (HashSet<Integer>) copy_get_itr(cps2, item2);
+                Iterator<Integer> cpsi3 =  cps3.iterator();
+
+                while (cpsi3.hasNext()) {
+                    int item3 = cpsi3.next();
+                    comb[level+2] = item3;
+
+                    HashSet<Integer> cps4 = (HashSet<Integer>) copy_get_itr(cps3, item3);
+                    Iterator<Integer> cpsi4 =  cps4.iterator();
+
+                    while (cpsi4.hasNext()) {
+                        comb[level+3] = cpsi4.next();
+                        log.debug("comb: {}", comb);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    public HashSet<?> copy_get_itr(HashSet<?> sets, int remove_value) {
+        HashSet<?> cps = (HashSet<?>) sets.clone();
+        cps.remove(remove_value);
+        return cps;
+    }
+
+
+    /**
+     * Study for random question to generate combinations
+     */
+    class Focus {
+        String focus;
+        List<String> values;
+
+        public Focus(String focus, String... values) {
+            this.focus = focus;
+            this.values = Arrays.asList(values);
+        }
+    }
+
+
+    private void CreateCombinations(List<Focus> focuses, int index, String[] values) {
+        Focus focus = focuses.get(index);
+        for (String v : focus.values) {
+            values[index] = v;
+            if (index < focuses.size() - 1) {
+                // there is at least one other focus
+                CreateCombinations(focuses, index+1, values);
+            } else {
+                // all values pinned down
+                StringBuilder sb = new StringBuilder(values[0]);
+                for (int i = 1; i < values.length; ++i) {
+                    sb.append(" ").append(values[i]);
+                }
+                // now do whatever you like to do with sb.toString()...
+            }
+        }
+    }
+
+    @Test
+    public void randomcomb() {
+        List<Focus> focuses = new ArrayList<Focus>();
+        focuses.add(new Focus("Focus 1", "09", "14", "13", "12"));
+        focuses.add(new Focus("Focus 2", "94", "92"));
+        focuses.add(new Focus("Focus 3", "A", "B"));
+
+        String[] values = new String[focuses.size()];
+        CreateCombinations(focuses, 0, values);
+
+        log.debug("hey");
+    }
 
 
 }
