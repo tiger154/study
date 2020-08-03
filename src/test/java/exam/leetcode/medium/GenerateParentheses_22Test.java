@@ -29,6 +29,8 @@ public class GenerateParentheses_22Test {
      *   ((2  ()2    )(2  ))2
      *
      *
+     *  - Time Complexity is O(n^2 * n)
+     *
      *  Check the link: https://stackoverflow.com/questions/33389954/generate-all-strings-of-n-bits-assume-a0-n-1-be-an-array-of-size-n/42665086
      *
      * Second What is logic to check if it's valid parenthesis --> balance
@@ -75,10 +77,57 @@ public class GenerateParentheses_22Test {
     public void brute_force() {
 
         int number = 2;
-        List<String> rtn_list = generateParenthesis(number);
+        //List<String> rtn_list = generateParenthesis(number);
+
+        List<String> rtn_list = generateParenthesisBacktrack(number);
 
         // recursive , backtrack and
         log.debug("test ");
     }
+
+
+    /**
+     * Its amazing approach.  I just copied and checked the logic
+     * The simple logic of backtracking is magic to me
+     *
+     * I drew binary and how it detect wrong branch to search.
+     *
+     *
+     *
+     *
+     *
+     * Explanation from leetcode site below
+     * Approach 2: Backtracking
+     * Intuition and Algorithm
+     *
+     * Instead of adding '(' or ')' every time as in Approach 1, let's only add them when we know it will remain a valid sequence. We can do this by keeping track of the number of opening and closing brackets we have placed so far.
+     *
+     * We can start an opening bracket if we still have one (of n) left to place. And we can start a closing bracket if it would not exceed the number of opening brackets.
+     *
+     * @param n
+     * @return
+     */
+    public List<String> generateParenthesisBacktrack(int n) {
+        List<String> ans = new ArrayList();
+        backtrack(ans, "", 0, 0, n);
+        return ans;
+    }
+
+    public void backtrack(List<String> ans, String cur, int open, int close, int max){
+
+        // When hit the leaf node
+        if (cur.length() == max * 2) {
+            ans.add(cur);
+            return;
+        }
+
+        // This is the condition for safe
+        if (open < max)
+            backtrack(ans, cur+"(", open+1, close, max);
+        if (close < open)
+            backtrack(ans, cur+")", open, close+1, max);
+    }
+
+
 
 }
