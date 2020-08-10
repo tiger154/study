@@ -55,14 +55,27 @@ public class MergeKSortedLists_23Test {
      *     d.next = last_array
      * }
      *
-     * then it's gonna work
+     * then it's gonna work, Im not sure why it's hard level ?
      *
      *
      */
     @Test
     public void first_approach() {
 
+        // 1. Give 3 test array
+
+
+
+
+
         // lets make 3 array merge!
+
+
+
+
+
+
+
 
         log.debug("test for fun programming");
 
