@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -25,6 +22,9 @@ import java.util.concurrent.TimeUnit;
  *
  * one instance only. many function call
  * If generate too many
+ *
+ *
+ * Var scope on multi thread : https://emong.tistory.com/187
  *
  */
 public class MultiThreadRequesterTest {
@@ -270,4 +270,35 @@ public class MultiThreadRequesterTest {
         }
          executorService.shutdown();
     }
+
+
+    public void performStaticSyncTask() {
+        synchronized (this) {
+
+        }
+    }
+
+
+    @Test
+    public void datatype_iterate_test() {
+        final Vector<Integer> a = new Vector<Integer>();
+        for(int i=0;i<100;i++) {
+            a.add(i);
+        }
+
+        new Thread() {
+            public void run() {
+                for (int i=100;i<1000;i++) {
+                    a.add(i);
+                }
+            }
+        }.start();
+
+        for (Integer integer: a) {
+            System.out.println(integer);
+        }
+
+    }
+
+
 }
