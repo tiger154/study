@@ -117,17 +117,47 @@ public class HeapSort {
      */
     public int[] sort() {
 
-
-
         int size = data.length;
-        // init data
-        for (int parent_index = size / 2 -1 ; parent_index > 0; parent_index--) {
 
-            // swap
-            // heapfify  int parent_index = size / 2 -1;
+        // 1. init data(build heap tree)
+        for (int parent_index = size / 2 -1 ; parent_index >= 0; parent_index--) {
+            // heapfify  int parent_index = size / 2 -1
             heapify(parent_index);
-
         }
+
+        // 2. sort
+        for (int last_index = size-1; last_index >= 0; last_index--) {
+            // swap front and tail
+            swap(last_index, 0);
+
+            // heapify again... So I can just go down from root to child.. then its working right?
+            int root_index = 0;
+            int temp = 1;
+
+            while ( root_index * 2 + 1 < last_index-1) { // hm why at the last index its not working.... hm..
+
+                int left_index = root_index * 2 + 1;
+                int right_index = root_index * 2 + 2;
+
+               // 2.1 get bigger child between left/right
+               if ( data[left_index] > data[right_index] ) {
+                   temp = left_index;
+               } else {
+                   temp = right_index;
+               }
+
+               // 2.2 if root is smaller then (heapify)
+                if (data[root_index] < data[temp] ) {
+                    swap(root_index, temp);
+                }
+                root_index = temp;
+            }
+        }
+
+
+
+
+
 
 
         return data;

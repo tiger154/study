@@ -239,6 +239,45 @@ public class MergeKSortedLists_23Test {
 
 
     /**
+     * All same but using data through priority queue
+     * Hm how I can implement this data structure. Im kinda interested as I should be ready as member of Big4
+     *
+     * Linked-list, Queue, Stack, Heaps
+     *
+     *
+     * How I can implement Queue?
+     *
+     * It should support iterate
+     * It should support FIFO
+     * It should support Get Most Front element
+     * It should support Put an element on tail
+     *
+     * Put mean get last node
+     *   Add next from the last node
+     *   > property next needed
+     * Get Front node mean
+     *   Get head from Queue
+     *   > property head needed
+     *
+     *
+     * Queue tail ?
+     * Queue next ?
+     * Queue head ?
+     *
+     *
+     *
+     *
+     * @param lists
+     * @return
+     */
+    public ListNode second_approach(ListNode[] lists) {
+
+
+
+        return null;
+    }
+
+    /**
      *  It's interesting
      *    1) traverse all elements -> to an array
      *    2) sort
