@@ -126,15 +126,22 @@ public class HeapSort {
         }
 
         // 2. sort
-        for (int last_index = size-1; last_index >= 0; last_index--) {
+        // If there is only 2 item left we don't need
+        for (int i = size-1; i >= 0; i--) {
             // swap front and tail
-            swap(last_index, 0);
+            swap(i, 0);
 
             // heapify again... So I can just go down from root to child.. then its working right?
             int root_index = 0;
             int temp = 1;
 
-            while ( root_index * 2 + 1 < last_index-1) { // hm why at the last index its not working.... hm..
+            // This I found a problem(bug). but not pretty solution... -_-!!!
+            // When it's only last root node.
+            if( i == 0 && data[root_index] >  data[root_index * 2 + 1]) {
+                swap(root_index, root_index * 2 + 1);
+            }
+
+            while ( root_index * 2 + 1 < i-1) { // It should be better look like
 
                 int left_index = root_index * 2 + 1;
                 int right_index = root_index * 2 + 2;
@@ -152,6 +159,8 @@ public class HeapSort {
                 }
                 root_index = temp;
             }
+
+
         }
 
 
