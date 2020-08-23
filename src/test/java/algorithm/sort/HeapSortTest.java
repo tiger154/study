@@ -39,9 +39,9 @@ public class HeapSortTest {
     public void basic_heap_sort_asc_test() {
 
         // given
-        //int[] input_data = {5,2,6,8,7,1,3,4};
+        int[] input_data = {5,2,6,8,7,1,3,4};
         //int[] input_data = {3,2,4,5,2,5,6,7,5,44};
-        int[] input_data = {7,6,5,8,3,5,9,1,6};
+        //int[] input_data = {7,6,5,8,3,5,9,1,6};
         //int[] input_data = {2,3,1};
         //int[] input_data = {3,1,2};
         int[] expected_data = {1,2,3,4,5,6,7,8};
