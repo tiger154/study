@@ -7,10 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class MergeKSortedLists_23Test {
 
@@ -98,16 +95,18 @@ public class MergeKSortedLists_23Test {
         ListNode cc = new ListNode(-2, new ListNode(0));
 
 //        ListNode[] test_list = new ListNode[]{a,b,c,d} ;
-//        ListNode[] test_list = new ListNode[]{a,b,c} ;
+        ListNode[] test_list = new ListNode[]{a,b,c} ;
 //        ListNode[] test_list = new ListNode[]{a,b} ;
 //        ListNode[] test_list = new ListNode[]{a} ;
 
 //        ListNode[] test_list = new ListNode[]{null,null} ;
-        ListNode[] test_list = new ListNode[]{null,e} ;
+//        ListNode[] test_list = new ListNode[]{null,e} ;
 
 //        ListNode[] test_list = new ListNode[]{aa,bb,cc} ;
 
-        ListNode node =  first_approach(test_list);
+//        ListNode node =  first_approach(test_list);
+
+        ListNode node =  second_approach(test_list);
 
         // [[-2,1,4,5],[-2,5,6],[-2,0]]
         // -2,-2,-2,0,..
@@ -266,15 +265,62 @@ public class MergeKSortedLists_23Test {
      *
      *
      *
+     * Time complexity : O(N log k) where k is the number of linked lists.
+     *
+     * The comparison cost will be reduced to O(logk) for every pop and insertion to priority queue. But finding the node with the smallest value just costs O(1) time.
+     * There are N nodes in the final linked list.
+     *
      *
      * @param lists
      * @return
      */
     public ListNode second_approach(ListNode[] lists) {
 
+        // basic check
+        if (lists.length == 0) {
+            return null;
+        }
+        if (lists.length == 1) {
+            return lists[0];
+        }
+
+        // 1. set compare condition(
+        PriorityQueue<ListNode> pq = new PriorityQueue<ListNode>((a, b) -> a.val - b.val);
 
 
-        return null;
+        // 2. transform to pq
+        //    - compare each linked list's head
+        for (ListNode node : lists) {
+            // When Add null data, it throws NullPointerException
+            if(node != null) {
+                pq.add(node);
+            }
+        }
+
+        // I would call this as remote string to a balloon
+        ListNode head = new ListNode(0);
+        ListNode current = head;
+
+
+        // 3. loop til pq is empty
+        //     use priority queue's remove function which guarantee get smallest value and remove the ListNode's head.
+        while (!pq.isEmpty()) {
+            // get smallest node
+            ListNode top = pq.remove();
+
+            // set to next and change pointer
+            current.next = top;
+            current = current.next;
+
+            // If next is not null reassign to the queue
+            if (top.next != null) {
+                pq.add(top.next);
+            }
+
+        }
+
+
+        return head.next;
     }
 
     /**
