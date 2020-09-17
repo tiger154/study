@@ -38,13 +38,34 @@ public class DivideTwoIntegers_29Test {
     @Test
     public void solution_test1() {
         int dividend = 10,  divisor = 3;
-
-        int result = first_approach(10, 3);
-
+        int result = first_approach(dividend, divisor);
         log.debug("result, {}", result);
-
+        Assert.assertEquals(3, result);
     }
 
+    @Test
+    public void solution_test2() {
+        int dividend = 7,  divisor = -3;
+        int result = first_approach(dividend, divisor);
+        log.debug("result, {}", result);
+        Assert.assertEquals(-2, result);
+    }
+
+    @Test
+    public void solution_test3() {
+        int dividend = -2147483648,  divisor = 1;
+        int result = first_approach(dividend, divisor);
+        log.debug("result, {}", result);
+        Assert.assertEquals(-2147483648, result);
+    }
+
+    @Test
+    public void solution_test4() {
+        int dividend = 10,  divisor = 2;
+        int result = second_approach_by_YuleiLi(dividend, divisor);
+        log.debug("result, {}", result);
+        Assert.assertEquals(5, result);
+    }
 
     /**
      * lets do subtract as much it can
@@ -54,12 +75,60 @@ public class DivideTwoIntegers_29Test {
      */
     public int first_approach(int dividend, int divisor) {
         int count = 0;
-        while (dividend >= divisor) {
-            dividend = dividend - divisor;
-            count++;
+        int big_dividend = 0;
+        int big_dividend_mod = 0;
+
+        // what would be the case of over flow?
+        if (divisor == -1 && dividend == Integer.MIN_VALUE) return Integer.MAX_VALUE;
+
+        if (dividend == Integer.MIN_VALUE) {
+            big_dividend = dividend / 10;
+            big_dividend_mod = dividend % 10;
         }
-        return count;
+
+        int temp_dividend = Math.abs(dividend);
+        int temp_divisor = Math.abs(divisor);
+
+        while (temp_dividend >= temp_divisor) {
+            temp_dividend = temp_dividend - temp_divisor;
+            count++;
+            // overflow check
+            if (count >= Integer.MAX_VALUE-1) return Integer.MAX_VALUE;
+        }
+
+        return (dividend >= 0 && divisor >= 0) || (dividend <= 0 && divisor <= 0) ? count : -count;
     }
+
+
+    /**
+     *
+     * @param dividend
+     * @param divisor
+     * @return
+     */
+    public int second_approach_by_YuleiLi(int dividend, int divisor) {
+        if(dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
+        boolean neg = dividend > 0 && divisor < 0 || dividend < 0 && divisor > 0;
+        if(dividend > 0)
+            dividend = -dividend;
+        if(divisor > 0)
+            divisor = -divisor;
+        int res = 0;
+        while(divisor >= dividend){
+            int count = 1;
+            int newDivisor = divisor;
+            while(newDivisor >= dividend - newDivisor){
+                newDivisor <<= 1;
+                count <<= 1;
+            }
+            dividend -= newDivisor;
+            res += count;
+        }
+        if(neg)
+            res = ~res + 1;
+        return res;
+    }
+
 
     /**
      *   1) multiply => shift(left)
@@ -89,5 +158,14 @@ public class DivideTwoIntegers_29Test {
         Assert.assertEquals(25, 100 >> 2);
         Assert.assertEquals(12, 100 >> 3);
         Assert.assertEquals(6, 100 >> 4);
+    }
+
+
+    @Test
+    public void bit_divide() {
+        int r1 = 9 >> 1;
+        int r2 = r1 >> 1;
+
+        log.debug("hahaha");
     }
 }
