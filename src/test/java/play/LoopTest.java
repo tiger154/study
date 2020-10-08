@@ -1,6 +1,7 @@
 package play;
 
 import com.jeonhwan.algorithm.sort.MergeSort;
+import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -103,8 +104,37 @@ public class LoopTest {
 
     }
 
+    //---------------------------------------------------------
+    //   Simple Iteration vs Recursive compare implementation
+    //---------------------------------------------------------
+    // 1 -> 10
+    @Test
+    public void sum_test_itr() {
+        int rtn =0;
+        for (int i =1; i <= 10; i++) {
+            rtn += i;
+        }
+        log.debug("rtn: {}", rtn);
+    }
 
+    @Test
+    public void sum_test_recursive() {
+        int rtn = sum_test_recursive(10, 1, 0);
+        Assert.assertEquals(55, rtn);
+    }
 
+    /**
+     * wow it's simple !
+     * @param time
+     * @param num
+     * @param rtn
+     * @return
+     */
+    public int sum_test_recursive(int time, int num, int rtn) {
+        rtn += num;
+        if (time == num) return rtn;
+        return sum_test_recursive(time, num+1, rtn);
+    }
 
 
 
