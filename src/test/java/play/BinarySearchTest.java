@@ -74,20 +74,19 @@ public class BinarySearchTest {
 
         int[] arr = {2,5,8,12,16,23,38,56,72,91};
         int low = 0, high = arr.length-1;
-        int mid = (low + high) / 2;
 
-        Assert.assertEquals(0, binary_search_recursive(arr, low, high, mid, 2));
-        Assert.assertEquals(1, binary_search_recursive(arr, low, high, mid, 5));
-        Assert.assertEquals(2, binary_search_recursive(arr, low, high, mid, 8));
-        Assert.assertEquals(3, binary_search_recursive(arr, low, high, mid, 12));
-        Assert.assertEquals(4, binary_search_recursive(arr, low, high, mid, 16));
-        Assert.assertEquals(5, binary_search_recursive(arr, low, high, mid, 23));
-        Assert.assertEquals(6, binary_search_recursive(arr, low, high, mid, 38));
-        Assert.assertEquals(7, binary_search_recursive(arr, low, high, mid, 56));
-        Assert.assertEquals(8, binary_search_recursive(arr, low, high, mid, 72));
-        Assert.assertEquals(9, binary_search_recursive(arr, low, high, mid, 91));
+        Assert.assertEquals(0, binary_search_recursive(arr, low, high,  2));
+        Assert.assertEquals(1, binary_search_recursive(arr, low, high,  5));
+        Assert.assertEquals(2, binary_search_recursive(arr, low, high,  8));
+        Assert.assertEquals(3, binary_search_recursive(arr, low, high,  12));
+        Assert.assertEquals(4, binary_search_recursive(arr, low, high,  16));
+        Assert.assertEquals(5, binary_search_recursive(arr, low, high,  23));
+        Assert.assertEquals(6, binary_search_recursive(arr, low, high,  38));
+        Assert.assertEquals(7, binary_search_recursive(arr, low, high,  56));
+        Assert.assertEquals(8, binary_search_recursive(arr, low, high,  72));
+        Assert.assertEquals(9, binary_search_recursive(arr, low, high,  91));
 
-        Assert.assertEquals(-1, binary_search_recursive(arr, low, high, mid, 100));
+        Assert.assertEquals(-1, binary_search_recursive(arr, low, high,  100));
 
     }
 
@@ -119,20 +118,23 @@ public class BinarySearchTest {
 
 
 
-    public int binary_search_recursive(int[] arr, int low, int high, int mid, int target) {
+
+
+    public static int binary_search_recursive(int[] arr, int low, int high, int target) {
         // exit condition
         if (low <= high) {
-            // when found value
+
+            int mid = (low + high) / 2;
+            // Exit condition: when found value
             if (arr[mid] == target) return mid;
             // actual logic
             if (target > arr[mid])
-                return binary_search_recursive(arr, mid+1, high, ((mid+1 + high) / 2), target);
+                return binary_search_recursive(arr, mid+1, high, target);
             else
-                return binary_search_recursive(arr, low, mid-1, ((low + mid-1) / 2), target);
+                return binary_search_recursive(arr, low, mid-1, target);
         }
         return -1;
     }
-
 
 
 

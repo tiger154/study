@@ -34,21 +34,21 @@ public class BinarySearch {
      * Search by recursive
      * @param arr
      * @param low
-     * @param high
-     * @param mid
+     * @param high     *
      * @param target
      * @return
      */
-    public static int search_recursive(int[] arr, int low, int high, int mid, int target) {
-        // exit condition
+    public static int search_recursive(int[] arr, int low, int high, int target) {
+        // Repeat condition
         if (low <= high) {
-            // when found value
+            int mid = (low + high) / 2;
+            // Exit condition: when found value
             if (arr[mid] == target) return mid;
             // actual logic
             if (target > arr[mid])
-                return search_recursive(arr, mid+1, high, ((mid+1 + high) / 2), target);
+                return search_recursive(arr, mid+1, high, target);
             else
-                return search_recursive(arr, low, mid-1, ((low + mid-1) / 2), target);
+                return search_recursive(arr, low, mid-1, target);
         }
         return -1;
     }
