@@ -9,12 +9,12 @@ public class StringTest {
         long now = System.currentTimeMillis();
 
         fast();
-        System.out.println("fast elapsed" + ( System.currentTimeMillis() - now) + " ms");
+        System.out.println("fast elapsed " + ( System.currentTimeMillis() - now) + " ms");
 
 
         now = System.currentTimeMillis();
         slow();
-        System.out.println("slow elapsed" + ( System.currentTimeMillis() - now) + " ms");
+        System.out.println("slow elapsed " + ( System.currentTimeMillis() - now) + " ms");
 
     }
 
