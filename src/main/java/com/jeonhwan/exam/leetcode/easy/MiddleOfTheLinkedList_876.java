@@ -1,5 +1,10 @@
 package com.jeonhwan.exam.leetcode.easy;
 
+
+/**
+ * Added solution description
+ *  - https://blog.naver.com/junhwen/222115360694
+ */
 public class MiddleOfTheLinkedList_876 {
 
 
@@ -9,6 +14,38 @@ public class MiddleOfTheLinkedList_876 {
         public ListNode() {};
         public ListNode(int val) {this.val = val;}
         public ListNode(int val, ListNode next) {this.val = val; this.next = next; }
+    }
+
+
+    /**
+     * It's not fully tested but enough to see the logic
+     *  - loop two time so O(N * 2) or O( N + N/2)
+     *
+     * @param head
+     * @return
+     */
+    public ListNode bruteforce_approach(ListNode head) {
+
+        ListNode temp = head;
+        int count = 1;
+
+        while (temp.next != null) {
+            temp = temp.next;
+            count++;
+        }
+
+        // now we know count
+
+        int index = 0;
+        int mid = count/2;
+        while (head.next != null) {
+            if (index == mid) {
+               return head;
+            }
+            head = head.next;
+            index++;
+        }
+        return head;
     }
 
 

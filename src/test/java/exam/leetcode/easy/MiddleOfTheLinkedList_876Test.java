@@ -33,6 +33,17 @@ public class MiddleOfTheLinkedList_876Test {
         log.debug("hi there");
     }
 
+    @Test
+    public void solution_test3() {
+
+        MiddleOfTheLinkedList_876 solution = new MiddleOfTheLinkedList_876();
+
+        MiddleOfTheLinkedList_876.ListNode rtn = solution.bruteforce_approach(new MiddleOfTheLinkedList_876.ListNode(1, new MiddleOfTheLinkedList_876.ListNode(2, new MiddleOfTheLinkedList_876.ListNode(3))));
+
+
+        log.debug("hi there");
+    }
+
 
 
 
