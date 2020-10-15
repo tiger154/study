@@ -6,7 +6,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MapTest {
@@ -62,6 +64,22 @@ public class MapTest {
 //
 //        Assert.assertEquals(true, isValidForBlock("A", map));
 //        Assert.assertEquals(false, isValidForBlock("A", map));
+
+
+    }
+
+    @Test
+    public void list_map_init_test() {
+        int block_size = 3;
+        List<HashMap<Character,Character>> row_map_list =  new ArrayList<HashMap<Character, Character>>(block_size){{
+            for (int i = 0; i < block_size; i++) {
+                add(new HashMap<>());
+            }
+        }};
+
+        Map<Character,Character> map = row_map_list.get(0);
+
+        log.debug("hey");
 
 
     }

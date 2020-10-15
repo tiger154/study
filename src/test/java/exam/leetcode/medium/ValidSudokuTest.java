@@ -7,9 +7,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ValidSudokuTest {
     private static Logger log = LoggerFactory.getLogger(ValidSudokuTest.class);
@@ -110,8 +108,15 @@ public class ValidSudokuTest {
      *
      *
      *
-     *  Time Complexity is O(N*2) which is not really cool but it's working
-     *  Next approach should be O(N) probably we can make -> I can try my own trick and also backtracking
+     *
+     *  Time Complexity is O(N)!
+     *   - It look for sudoku block from top - left - right - down.
+     *   - When it hit a column it check 1) row 2) column 3) sudoku block unique with Map so checking time is only O(1)
+     *   - It loops only board size which is for now 81. So we can also say O(81)
+     *
+     *    > Runtime: 2 ms, faster than 85.53% of Java online submissions for Valid Sudoku.
+     *
+     *  Need to check others solution, and compare and if possible implement as well with new approach :)
      *
      * @param board
      * @return
@@ -119,6 +124,10 @@ public class ValidSudokuTest {
     public boolean first_approach(char[][] board) {
 
         int block_size = 3;
+        int col_size = block_size * block_size;
+
+        List<HashMap<Character,Character>> col_map_list =  generate_map_list(col_size); // size must be block_size * block_size : 9
+
 
         // draw all block
         // Here we just point each sdoku block start point(left,top)
@@ -132,10 +141,13 @@ public class ValidSudokuTest {
 
             // 2. block check.
             int x = i * block_size;
+            // row map list with generate
+            List<HashMap<Character,Character>> row_map_list = generate_map_list(block_size);
+
             for (int j = 0; j < block_size; j++) {
                 int y = j * block_size;
                 Map<Character, Character> block_map = new HashMap<>(); // It should be clean before check each block
-                if (!block_check(board, block_map, x, y, block_size)) {
+                if (!block_check(board, block_map, row_map_list, col_map_list , x, y, block_size)) {
                     return false;
                 }
             }
@@ -144,10 +156,69 @@ public class ValidSudokuTest {
        return true;
     }
 
+    /**
+     * Generate fixed size list and init data
+     * @param size
+     * @return
+     */
+    public List<HashMap<Character, Character>> generate_map_list(int size) {
+        List<HashMap<Character,Character>> map_list =  new ArrayList<HashMap<Character, Character>>(size){{
+            for (int i = 0; i < size; i++) {
+                add(new HashMap<>());
+            }
+        }};
+        return map_list;
+    }
+
+
+    /**
+     * Map unique checker
+     * @param val
+     * @param block_map
+     * @return
+     */
     public boolean isValidMap(char val, Map<Character, Character> block_map) {
         Character rtn = block_map.put(val, val);
         return (rtn == null || val != rtn);
     }
+
+    /**
+     * Sudoku block checker
+     *
+     * @param board
+     * @param block_map
+     * @param row_map_list
+     * @param col_map_list
+     * @param x
+     * @param y
+     * @param block_size
+     * @return
+     */
+    public boolean block_check(char[][] board, Map<Character, Character> block_map, List<HashMap<Character, Character>> row_map_list, List<HashMap<Character, Character>> col_map_list ,int x,  int y, int block_size ) {
+
+        // drawing(look for) sdoku block block_size * block_size
+        for (int i = x; i < (x + block_size); i++) {
+            for (int j = y; j < (y + block_size) ; j++) {
+                log.debug("i,j: {},{}", i, j);
+                if (board[i][j] == '.') continue;
+
+                // 1) check if row valid
+                int row_index = i % block_size;  // simple math trick can make save spaces! It just keep 'block_size' max :)
+                if (!isValidMap(board[i][j], row_map_list.get(row_index))) return false;   // first - row check
+
+                // 2) check if column valid
+                if (!isValidMap(board[i][j], col_map_list.get(j))) return false;   // second - column check
+
+                // 3) check block valid
+                if (!isValidMap(board[i][j], block_map)) return false;     // third - sudoku block check
+            }
+        }
+        return true;
+    }
+
+
+
+
 
     @Test
     public void simple_loop_test1() {
@@ -156,34 +227,10 @@ public class ValidSudokuTest {
         int block_start_pointer = 3;
         int block_size = 3;
 
-        block_check(null, null, 3, 6, 3);
+        block_check(null, null,null, null, 3, 6, 3);
 
 
     }
-
-    public boolean block_check(char[][] board, Map<Character, Character> block_map, int x,  int y, int block_size ) {
-
-
-
-        // drawing(look for) sdoku block block_size * block_size
-        for (int i = x; i < (x + block_size); i++) {
-            for (int j = y; j < (y + block_size) ; j++) {
-                log.debug("i,j: {},{}", i, j);
-                if (board[i][j] == '.') continue;
-
-                // refresh row when hit most right cell in the map
-
-                // check if row valid
-
-                // check if column valid
-
-                if (!isValidMap(board[i][j], block_map)) return false;     // first
-            }
-        }
-        return true;
-    }
-
-
 
     /**
      * to print out block size
