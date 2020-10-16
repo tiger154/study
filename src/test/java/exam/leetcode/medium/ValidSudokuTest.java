@@ -31,6 +31,7 @@ public class ValidSudokuTest {
         Assert.assertTrue(first_approach(board1));
 
 
+
         char[][] board2 = {
                 {'8', '3', '.', '.', '7', '.', '.', '.', '.'}
                 , {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
@@ -67,6 +68,81 @@ public class ValidSudokuTest {
 
         Assert.assertFalse(first_approach(board1));
 
+    }
+
+
+    /**
+     * Short simple java using string
+     *  - https://www.youtube.com/watch?v=Pl7mMcBm2b8
+     *  - https://leetcode.com/problems/valid-sudoku/discuss/15472/Short%2BSimple-Java-using-Strings
+     *
+     * This is genius solution.
+     *
+     *  - Just loop normal 9 * 9.
+     *  - Make One HashSet only (No need other space at all)
+     *  - Encoding three perspective (row, column, block)
+     *    1) row => (value)row_index => (4)7
+     *    1) col => col_index(value) => 7(4)
+     *    3) box => x (value) y => 0(4)2
+     *       - x: i/3
+     *       - y: j/3
+     *
+     *   He made this with only 12 lines of code -_-;;
+     *
+     *   But It's quit slow. So I tried approach 3 which is just change to use StringBuilder which is really faster :)
+     *      - 20ms -> 3ms ;)
+     *
+     *
+     *  Note: If it was not limited size of board, such as like million size.
+     *        Probably we should come up other way to reduce/ look for map.
+     *        But as it's constant size, we simply loop the map.
+     *        And Just make simple rule checking this is the key of this problem.
+     *
+     * @param board
+     * @return
+     */
+    public  boolean second_approach(char[][] board) {
+        HashSet<String> seen = new HashSet<>();
+        for (int i = 0; i < 9; i++) {
+            for (int j =0; j<9; j++) {
+                // skip if empty
+                if (board[i][j] == '.') continue;
+                // add and check -- HashSet If there is duplication it return false! So easy to check
+                String value = "(" + board[i][j] + ")";
+                if ( !seen.add(value + i) || !seen.add(j + value) || !seen.add( i/3 + value + j/3)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
+    public  boolean third_approach(char[][] board) {
+        HashSet<String> seen = new HashSet<>();
+        for (int i = 0; i < 9; i++) {
+            for (int j =0; j<9; j++) {
+                // skip if empty
+                if (board[i][j] == '.') continue;
+                // add and check -- HashSet If there is duplication it return false! So easy to check
+//                String value = "(" + board[i][j] + ")";
+                StringBuilder builder =  new StringBuilder();
+                builder.append("(").append(board[i][j]).append(")");
+                String value = builder.toString();
+
+                builder =  new StringBuilder();
+                String row_s = builder.append(value).append(i).toString();
+                builder =  new StringBuilder();
+                String col_s = builder.append(j).append(value).toString();
+                builder =  new StringBuilder();
+                String box_s = builder.append(i/3).append(value).append(j/3).toString();
+
+                if ( !seen.add(row_s) || !seen.add(col_s) || !seen.add(box_s)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 
@@ -217,7 +293,40 @@ public class ValidSudokuTest {
     }
 
 
-
+    /**
+     * This is also good but and bit similar with my Idea
+     *  But it control box concept more math focus and looks good
+     *  Using /, % to look for box.
+     *
+     *  Let say given j [0...8] increased
+     *
+     *   - (col) Horizontal traverse use '%' => 0%3=0, 1%3=1, 2%3=2, 3%3=0, 4%3=1 ...
+     *   - (row) Vertical traverse use '/'   => 0/3=0, 1/3=0, 2/3=0, 3/3=1, 4/3=1 ...
+     *
+     *
+     *
+     *
+     * @param board
+     * @return
+     */
+    public boolean isValidSudoku2(char[][] board) {
+        for(int i = 0; i<9; i++){
+            HashSet<Character> rows = new HashSet<Character>();
+            HashSet<Character> columns = new HashSet<Character>();
+            HashSet<Character> cube = new HashSet<Character>();
+            for (int j = 0; j < 9;j++){
+                if(board[i][j]!='.' && !rows.add(board[i][j]))
+                    return false;
+                if(board[j][i]!='.' && !columns.add(board[j][i]))
+                    return false;
+                int RowIndex = 3*(i/3);
+                int ColIndex = 3*(i%3);
+                if(board[RowIndex + j/3][ColIndex + j%3]!='.' && !cube.add(board[RowIndex + j/3][ColIndex + j%3]))
+                    return false;
+            }
+        }
+        return true;
+    }
 
 
     @Test
