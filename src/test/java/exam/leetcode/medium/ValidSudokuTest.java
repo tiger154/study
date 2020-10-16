@@ -329,6 +329,38 @@ public class ValidSudokuTest {
     }
 
 
+    /**
+     * It draws sudoku block based search
+     *
+     */
+    @Test
+    public void print_sudoku_start_points() {
+
+        int block_size = 3;
+        int block_size_limit = block_size * block_size;
+
+        // 1. draw each sudoku box start point (9times)
+        for (int i = 0; i < block_size_limit; i= i+block_size) {
+            for (int j = 0; j < block_size_limit; j= j+block_size) {
+
+                log.debug("box start point! i,j: {},{}", i,j);
+
+                // draw each sudoku box's detail(9 times)
+                for (int x = i; x < (i+block_size); x++) {
+                    for (int y = j; y < (j+block_size); y++) {
+                        log.debug("sudoku box x,y: {}, {}", x, y);
+
+                        // Here we can add check logic with Map
+                        // 1) Sudoku block check
+                        // 2) Row check
+                        // 3) Col check
+                        // When ever return false from those condition, it directly return false!
+                    }
+                }
+            }
+        }
+    }
+
     @Test
     public void simple_loop_test1() {
 
