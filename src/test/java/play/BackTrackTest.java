@@ -10,6 +10,9 @@ import java.util.*;
 public class BackTrackTest {
     private static Logger log = LoggerFactory.getLogger(MergeSort.class);
 
+    //-------------------------------------------------------------------------------
+    // Maze solving with backtracking
+    //-------------------------------------------------------------------------------
 
     /**
      * Make data structure let say there is a grid 4*4
@@ -312,7 +315,45 @@ public class BackTrackTest {
 
 
 
+    //-------------------------------------------------------------------------------
+    // Backtrack Tests from Leetcode:
+    //   - https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+    // To see general backtrack problems solving.
+    //
+    //   !! 7 Problem with backtracking practice!
+    //
+    //
+    //-------------------------------------------------------------------------------
 
+    /**
+     * 1. SubSet
+     *    - https://leetcode.com/problems/subsets/
+     */
+
+    @Test
+    public void subset_test() {
+        int[] nums = new int[]{1,2,3};
+        List<List<Integer>> rtn = subsets(nums);
+        log.debug("hi there");
+
+
+    }
+
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+        Arrays.sort(nums);
+        backtrack(list, new ArrayList<>(), nums, 0);
+        return list;
+    }
+
+    private void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
+        list.add(new ArrayList<>(tempList));
+        for(int i = start; i < nums.length; i++){
+            tempList.add(nums[i]);
+            backtrack(list, tempList, nums, i + 1);
+            tempList.remove(tempList.size() - 1);
+        }
+    }
 
 
 }
