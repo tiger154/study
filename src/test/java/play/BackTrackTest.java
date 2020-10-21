@@ -322,38 +322,161 @@ public class BackTrackTest {
     //
     //   !! 7 Problem with backtracking practice!
     //
+    //  1. Drawl(Make) a tree(or map) with ur hand.
+    //  2. Think(Draw) backtracking order (usually there is concat string, and looping arguments.
+    //  3. Think(Draw) parameter structure in detail
+    //  4. Think(Draw) When to save the data
     //
+    //   So far I used this to get combinations, find path. wonder where I can use this more !
     //-------------------------------------------------------------------------------
 
     /**
      * 1. SubSet
      *    - https://leetcode.com/problems/subsets/
+     *    I spent lot of time to debug on my head(not writing, no IDE)
+     *    First of all I didn't know subset mean so bit confused.
+     *
+     *
+     *
      */
 
     @Test
     public void subset_test() {
         int[] nums = new int[]{1,2,3};
         List<List<Integer>> rtn = subsets(nums);
-        log.debug("hi there");
-
-
+        log.debug("hi there, rtn: {}", rtn);
     }
 
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(list, new ArrayList<>(), nums, 0);
+        Arrays.sort(nums); // Let's check again why do we need sorting here? as it need time O(n Log n)
+        backtrack_subset(list, new ArrayList<>(), nums, 0);
         return list;
     }
 
-    private void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
+    private void backtrack_subset(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
         list.add(new ArrayList<>(tempList));
         for(int i = start; i < nums.length; i++){
             tempList.add(nums[i]);
-            backtrack(list, tempList, nums, i + 1);
+            backtrack_subset(list, tempList, nums, i + 1);
             tempList.remove(tempList.size() - 1);
         }
+
     }
+
+    /**
+     * 2. SubSet with dup data
+     *    - https://leetcode.com/problems/subsets-ii/
+     *
+     *   To check duplication I first thought HashSet<List<Integer>>, But some how it doesnt work
+     *   And I though what about using HashSet<List<String>> which I need to use 'arrays.toString' But I guess that would be O(N)
+     *   Which is expensive so probably interviewer doesnt want.
+     *
+     *   And I couldn't find answer, but after check the answer it was aha moment ;)
+     *   1. As it's sort first, all duplication is aligned
+     *   2. As it check all combination left to right. on each level if there is duplicate we can check  if (i == i-1)
+     *      - Because it's subset it's working
+     */
+
+    @Test
+    public void subset_dup_test() {
+        int[] nums = new int[]{1,2,2};
+        List<List<Integer>> rtn = subsetsWithDup(nums);
+        log.debug("hi there, rtn: {}", rtn);
+    }
+
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+
+        // duplication checker
+        List<List<Integer>> final_list = new ArrayList<>();
+        Arrays.sort(nums);  // It must be sorted...
+        backtrack_subset_with_dup( final_list, nums, new ArrayList<Integer>(), 0);
+
+        return final_list;
+
+    }
+
+    public void backtrack_subset_with_dup(List<List<Integer>> final_list, int[]  nums, List<Integer> curr, int start) {
+        // add data if not duplicate --> It doesn't detect..
+        // array compare, I would say gonna make to string and compare.it
+        // Index comparing is not needed. we need to compare data if it's same...
+
+        final_list.add(new ArrayList<>(curr));
+
+        // loop (start ~ nums.length)
+        for (int i = start; i < nums.length; i++) {
+
+            // this single line is a beauty, and define everything here
+            // If it's ordered we can simply compare i and i-1
+            // If it was not subset but Permutations we can't use this..
+            if (i > start && nums[i] == nums[i-1]) continue;
+
+            // concat cur combination
+            curr.add(nums[i]);
+            // call again
+            backtrack_subset_with_dup(final_list, nums, curr, i+1);
+            // backtrack after it done
+            curr.remove(curr.size()-1);
+        }
+    }
+
+
+
+    /**
+     *  3. Permutations
+     *    - https://leetcode.com/problems/permutations/
+     *
+     *    - I already solve myself but not using backtrack, Mine is bit better (O(n! *n ), then backtrack (n! * n^2) but for the practice reason I implement it.
+     *
+     */
+
+    @Test
+    public void permute_test() {
+        int[] nums = new int[]{1,2,3};
+        List<List<Integer>> rtn = permute(nums);
+        log.debug("hi there, rtn: {}", rtn);
+    }
+
+    public List<List<Integer>> permute(int[] nums) {
+        // lets call backtrack function
+        List<List<Integer>> list = new ArrayList<>();
+        boolean[] dup_checker = new boolean[nums.length]; // initial value is set to false! good
+        backtrack_permute(list, nums, new ArrayList<>(), dup_checker);
+        return list;
+    }
+
+
+    public void backtrack_permute(List<List<Integer>> list, int[] nums, List<Integer> curr, boolean[] dup_checker) {
+
+        // exit condition or adding data condition
+        if (curr.size() == nums.length)
+            list.add(new ArrayList<>(curr));
+
+        // (n! * n^2) time for each -> which is quit expensive!
+        for (int i =0; i < nums.length; i++) {
+
+            if (dup_checker[i]) continue;   // duplication skip
+
+            // path(comb) making
+            curr.add(nums[i]);
+            dup_checker[i] = true;
+
+            // recursive call!
+            backtrack_permute(list, nums, curr, dup_checker);
+            // backtrack
+            curr.remove(curr.size()-1);
+            dup_checker[i] = false;
+        }
+    }
+
+
+    /**
+     *  4. Permutations II (contains duplicates) :
+     *    - https://leetcode.com/problems/permutations-ii/
+     *
+     *   duplicate check
+     */
+
 
 
 }
