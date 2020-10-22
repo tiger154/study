@@ -432,7 +432,7 @@ public class BackTrackTest {
 
     @Test
     public void permute_test() {
-        int[] nums = new int[]{1,2,3};
+        int[] nums = new int[]{1,1,2};
         List<List<Integer>> rtn = permute(nums);
         log.debug("hi there, rtn: {}", rtn);
     }
@@ -474,9 +474,80 @@ public class BackTrackTest {
      *  4. Permutations II (contains duplicates) :
      *    - https://leetcode.com/problems/permutations-ii/
      *
-     *   duplicate check
+     *   Duplicate check how to do it
+     *
+     *   1. Sorting manner
+     *     1) sort first
+     *     2) if i >0 && arr[i] == arr[i-1] && !used[i-1] ==> duplication!!
+     *
+     *
+     *
+     *
+     *
+     *   2. Counter strategy
+     *     1) Make an hashmap -> Real candidate with count
+     *     2) Pass argument with count-1 everytime
+     *     3) On backtrack, recover count as well.
+     *       - Keep going on.
+     *
+     *
+     *
+     *
      */
 
+    @Test
+    public void permute_uq_test() {
+        int[] nums = new int[]{1,1,2};
+        List<List<Integer>> rtn = permuteUnique(nums);
+        log.debug("hi there, rtn: {}", rtn);
+    }
 
+
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        List<List<Integer>> results = new ArrayList<>();
+
+        // count the occurrence of each number
+        HashMap<Integer, Integer> counter = new HashMap<>();
+        for (int num : nums) {
+            if (!counter.containsKey(num))
+                counter.put(num, 0);
+            counter.put(num, counter.get(num) + 1);
+        }
+
+        LinkedList<Integer> comb = new LinkedList<>();
+        this.backtrack(comb, nums.length, counter, results);
+        return results;
+    }
+
+    protected void backtrack(
+            LinkedList<Integer> comb,
+            Integer N,
+            HashMap<Integer, Integer> counter,
+            List<List<Integer>> results) {
+
+        if (comb.size() == N) {
+            // make a deep copy of the resulting permutation,
+            // since the permutation would be backtracked later.
+            results.add(new ArrayList<Integer>(comb));
+            return;
+        }
+
+        for (Map.Entry<Integer, Integer> entry : counter.entrySet()) {
+            Integer num = entry.getKey();
+            Integer count = entry.getValue();
+            if (count == 0)
+                continue;
+            // add this number into the current combination
+            comb.addLast(num);
+            counter.put(num, count - 1);
+
+            // continue the exploration
+            backtrack(comb, N, counter, results);
+
+            // revert the choice for the next exploration
+            comb.removeLast();
+            counter.put(num, count);
+        }
+    }
 
 }
