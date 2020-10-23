@@ -17,7 +17,7 @@ public class BigOTest {
     //-----------------------------------------------
 
     /**
-     * O(N*M)
+     * O(N^2)
      *   - M is increasing by Nth length
      */
     @Test
