@@ -1,11 +1,13 @@
 package play;
 
 import com.jeonhwan.algorithm.sort.MergeSort;
+import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import static org.junit.Assert.*;
 
 public class BackTrackTest {
     private static Logger log = LoggerFactory.getLogger(MergeSort.class);
@@ -279,6 +281,57 @@ public class BackTrackTest {
     List<String> combnations = new ArrayList<>();
 
 
+    @Test
+    public void subst_test() {
+        String a = "abc";
+        Assert.assertEquals("ab",a.substring(0, a.length()-1));
+    }
+
+
+    @Test
+    public void backtrack_test_again() {
+
+        List<String> result = new ArrayList<>();
+//        // call back track here! to see all possible path
+//        comb_get(result, "", "");
+//        assertTrue(  Arrays.asList("").containsAll(result) && result.containsAll(Arrays.asList("")));
+
+        result = new ArrayList<>();
+        comb_get(result, "", "2");
+        assertTrue(  Arrays.asList("a","b","c").containsAll(result) && result.containsAll(Arrays.asList("a","b","c")));
+
+
+        for (String combination : result) {   log.debug(combination);}
+    }
+
+    public void comb_get(List<String> result, String curr, String digits) {
+
+        if (digits.isEmpty())  {
+            result.add(curr);
+            return;
+        }
+
+        String s = dial.get(digits.substring(0,1));
+
+        for (int i=0; i< s.length(); i++) {
+
+            curr = curr + s.charAt(i);
+            comb_get(result, curr, digits.substring(1)); // decrease possible digits num
+            curr = curr.substring(0, curr.length()-1);
+        }
+    }
+
+    public List<String> letterCombinations(String digits) {
+        List<String> result = new ArrayList<>();
+        if (digits.length() > 0) comb_get(result, "", digits);
+        return result;
+    }
+
+
+
+
+
+
 
     @Test
     public void backtrack_test() {
@@ -318,6 +371,7 @@ public class BackTrackTest {
     //-------------------------------------------------------------------------------
     // Backtrack Tests from Leetcode:
     //   - https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+    //   - Description backtracking: https://medium.com/algorithms-and-leetcode/backtracking-e001561b9f28
     // To see general backtrack problems solving.
     //
     //   !! 7 Problem with backtracking practice!
@@ -328,6 +382,8 @@ public class BackTrackTest {
     //  4. Think(Draw) When to save the data
     //
     //   So far I used this to get combinations, find path. wonder where I can use this more !
+    //
+    //  permutations & combination detail explanation: https://gridamath.tistory.com/43
     //-------------------------------------------------------------------------------
 
     /**
@@ -497,8 +553,12 @@ public class BackTrackTest {
 
     @Test
     public void permute_uq_test() {
-        int[] nums = new int[]{1,1,2};
-        List<List<Integer>> rtn = permuteUnique(nums);
+
+        List<List<Integer>> rtn = permuteUnique(new int[]{1,1,2});
+        log.debug("hi there, rtn: {}", rtn);
+
+        rtn = permuteUnique(new int[]{1,2,3});
+
         log.debug("hi there, rtn: {}", rtn);
     }
 
@@ -549,5 +609,304 @@ public class BackTrackTest {
             counter.put(num, count);
         }
     }
+
+
+    /**
+     *  5. Combination Sum
+     *    - https://leetcode.com/problems/combination-sum/
+     *    - It looks like Combinations with allowing duplication
+     *
+     *    Problem: I didn't realize this is combination with duplication.
+     *    Reason: I have small experience of this types.
+     *    Solution: Solve and Sort it out myself more of related types.
+     *
+     *     - But I can build plan how to solve this. Also could explain Time complexity.
+     *
+     *
+     *   1) Idea
+     *     (1) Generate all combinations with recursive
+     *
+     *   2) Recursive in detail
+     *
+     *     target: target number
+     *     start: loop start index, (incremental number)
+     *     end  : length of given array (Static number)
+     *     curr : current comb (list of int)
+     *     final : final combs ( lis of list of int)
+     *     sum  : each time sum value
+     *       - sum = 0; // init
+     *       - sum = sum +  (Level)N[Index]
+     *       !! When we pass the 'sum' data we need pass as
+     *     (1) Loop (i = start ~ end, i++)
+     *       - Each index can be selected again
+     *       - Pass sum (sum += m)  value to next call     *
+     *          (2) Exit condition
+     *               A. If sum > target  --> return;
+     *               B. If sum == target --> save combination && return;
+     *
+     *          (3) Curr.add(arr[i])
+     *          (4) Call f(target, i, end, sum, curr, final)
+     *               -
+     *          (5) Backtracking
+     *               Curr.remove(curr.length)
+     *
+     *    3) TimeComplexity
+     *       - H(n,r) = C(n+r - 1, r) => nHr = n+r-1Cr
+     *      1) All combinations: nCr + nCr-1 + nCr-2 ... + nC1
+     *          - O(nHr * n )
+     *         - n : length of number (0 - n)
+     *
+     *      2) Each element can be increased M time
+     *          - n * M
+     *          - n is length of number
+     *          - M is maximum repeated element
+     *            > log n[0] target
+     *
+     *      3) Final result
+     *          - O(nHr * n * n * M) =>  O(nCr * n^n * M)
+     *
+     *          which is really
+     *
+     */
+
+
+    @Test
+    public void comb_sum_test() {
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(2,2,3)); add(Arrays.asList(7));
+        }}, combinationSum(new int[]{2,3,6,7}, 7));
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(2,2,2,2)); add(Arrays.asList(2,3,3)); add(Arrays.asList(3,5));
+        }}, combinationSum(new int[]{2,3,5}, 8));
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(), combinationSum(new int[]{2}, 1));
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(1));
+        }}, combinationSum(new int[]{1}, 1));
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(1,1));
+        }}, combinationSum(new int[]{1}, 2));
+        //log.debug("hi there, comb_list: {}", comb_list);
+    }
+
+
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> final_list = new ArrayList<>();
+        combination_sum_recursive(candidates, target, final_list, new ArrayList<Integer>(), 0, 0);
+        return final_list;
+    }
+
+    public void combination_sum_recursive(int[] nums, int target, List<List<Integer>> final_list, List<Integer> curr, int sum, int start) {
+
+        // exit condition
+        if (sum > target) return;
+        if (sum == target) final_list.add(new ArrayList<>(curr));
+
+        // loop recursive logic here!
+        for (int i = start; i < nums.length; i++) {
+            int temp_sum = sum + nums[i];    // If it's copy of value it should be fine!
+            curr.add(nums[i]);
+            // call recursive
+            combination_sum_recursive(nums, target, final_list, curr, temp_sum, i);
+            // backtracking
+            curr.remove(curr.size() - 1);
+        }
+
+    }
+
+
+    /**
+     * 6. Combination Sum2
+     *   - https://leetcode.com/problems/combination-sum-ii/
+     *
+     * Idea: It's similar with subset problem but with sum condition
+     *       1) So make subset with saving sum subset
+     *       2) Skip If arr[i-1] == arr[i] then result would be same ?
+     *
+     *
+     *  10,1,2,7,6,1,5
+     *
+     *  1,1,2,5,6,7,10
+     */
+    @Test
+    public void comb_sum2_test() {
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(1,1,6)); add(Arrays.asList(1,2,5)); add(Arrays.asList(1,7)); add(Arrays.asList(2,6));
+        }}, combinationSum2(new int[]{10,1,2,7,6,1,5}, 8));
+
+
+        Assert.assertEquals(new ArrayList<List<Integer>>(){{
+            add(Arrays.asList(1,2,2)); add(Arrays.asList(5));
+        }}, combinationSum2(new int[]{2,5,2,1,2}, 5));
+
+        // 2,5,2,1,2
+    }
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        List<List<Integer>> final_list = new ArrayList<List<Integer>>();
+        combination_sum2_recursive(candidates, target, final_list, new ArrayList<Integer>(), 0, 0 );
+        return final_list;
+
+    }
+
+    public void combination_sum2_recursive(int[] nums, int target, List<List<Integer>> final_list, List<Integer> curr, int sum, int start) {
+
+        // ignore edge cases
+        if (sum > target) return;
+        // save data
+        if (sum == target) final_list.add(new ArrayList<>(curr));
+
+
+        for (int i = start; i < nums.length; i++) {
+            // sum data
+            int temp_sum = sum + nums[i];
+
+
+            if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
+
+            log.debug("combination: {}, sum: {}", curr, sum);
+
+            // set curr
+            curr.add(nums[i]);
+            // recursive call
+            combination_sum2_recursive(nums, target, final_list, curr, temp_sum, i+1);
+            // backtrack
+            curr.remove(curr.size()-1);
+
+        }
+    }
+
+
+    /**
+     * 7. Palindrome Partitioning
+     *  - https://leetcode.com/problems/palindrome-partitioning/
+     *
+     * Idea: Generate All SubString
+     *        - pass start+1
+     *        - loop i=start ~ end of string
+     *        - from start ~ i --> consecutive combination(SubString)
+     *       Check If its valid palindrome
+     *        - Use two index (start++, end--) , while(start < end)
+     *        - So we can check N/2 time by word
+     *
+     */
+    @Test
+    public void palindrome_test() {
+
+
+        Assert.assertEquals(new ArrayList<List<String>>(){{
+            add(Arrays.asList("a","a","b")); add(Arrays.asList("aa", "b"));
+        }}, partition("aab"));
+    }
+
+    public List<List<String>> partition(String s) {
+        List<List<String>> list = new ArrayList<>();
+        backtrack(list, new ArrayList<>(), s, 0);
+        return list;
+    }
+
+    public void backtrack(List<List<String>> list, List<String> tempList, String s, int start){
+
+
+
+        if(start == s.length())
+            list.add(new ArrayList<>(tempList));
+        else{
+            for(int i = start; i < s.length(); i++){
+                if(isPalindrome(s, start, i)){
+                    tempList.add(s.substring(start, i + 1));
+                    backtrack(list, tempList, s, i + 1);
+                    tempList.remove(tempList.size() - 1);
+                }
+            }
+        }
+    }
+
+    public boolean isPalindrome(String s, int low, int high){
+        while(low < high)
+            if(s.charAt(low++) != s.charAt(high--)) return false;
+        return true;
+    }
+
+
+
+    public List<List<String>> partition2(String s) {
+        List<List<String>> list = new ArrayList<>();
+        backtrack2(list, new ArrayList<>(), s, 0);
+        return list;
+    }
+
+    public void backtrack2(List<List<String>> list, List<String> tempList, String s, int start){
+
+        // it goes to the end so don't need any of exit condition
+
+        // save condition --> It doesn't need to reach all branch
+        // so when ever it reach at the end  stop it. 
+        if (start == s.length()) {
+            // this is the point to return.
+        }
+        if(start == s.length())
+            list.add(new ArrayList<>(tempList));
+        else{
+            for(int i = start; i < s.length(); i++){
+                if(isPalindrome2(s, start, i)){
+                    tempList.add(s.substring(start, i + 1));
+                    backtrack2(list, tempList, s, i + 1);
+                    tempList.remove(tempList.size() - 1);
+                }
+            }
+        }
+    }
+
+    public boolean isPalindrome2(String s, int low, int high){
+        while(low < high)
+            if(s.charAt(low++) != s.charAt(high--)) return false;
+        return true;
+    }
+
+
+
+    public boolean is_pal(String s) {
+        for (int i=0; i < s.length()/2; i++) {
+            if (s.charAt(i) != s.charAt(s.length()-1-i)) return false;
+        }
+        return true;
+    }
+
+    public boolean is_pal_index(String s, int start, int end) {
+        while (start < end) {
+            if (s.charAt(start++) != s.charAt(end--)) return false;
+        }
+        return true;
+    }
+
+
+    @Test
+    public void is_pal_index_test() {
+        Assert.assertTrue(is_pal_index("aba",0,2));
+        Assert.assertFalse(is_pal_index("aba",1,2));
+
+    }
+
+    @Test
+    public void is_pal_test() {
+        Assert.assertTrue(is_pal("aba"));
+        Assert.assertFalse(is_pal("abaa"));
+        Assert.assertTrue(is_pal("abba"));
+        Assert.assertTrue(is_pal("npapn"));
+    }
+
+
+    // get all substring is this... pal is just for fun!
+    //
+
+
+
+
 
 }

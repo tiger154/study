@@ -39,6 +39,19 @@ public class PassByWhat {
         log.debug("x: {}, y: {}", x,y);
     }
 
+
+    @Test
+    public void test_int_increment() {
+        int a = 1;
+        increment(a);
+        log.debug("a: {}: ", a);
+    }
+
+    public void increment(int a) {
+       a = a + 1;
+    }
+
+
     /**
      * Here it sets like this ->  oldDog = aDog = new Dog('Max')
      * And tried to change oldDog's name to 'Old Max'
