@@ -66,9 +66,7 @@ public class GroupAnagrams_49 {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             char[] ca = new char[26];
-            for (char c : s.toCharArray()) {
-                ca[c - 'a'] = 1;
-            }
+            for (char c : s.toCharArray())   ca[c - 'a'] = 1;
             String keyStr = String.valueOf(ca);
             if (!map.containsKey(keyStr)) map.put(keyStr, new ArrayList<>());
             map.get(keyStr).add(s);
