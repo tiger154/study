@@ -1,10 +1,13 @@
 package play;
 
+import exam.leetcode.easy.ValidAnagram_242Test;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BitTest {
 
-
+    private static Logger log = LoggerFactory.getLogger(BitTest.class);
     /**
      * def diff(n, d):
      *     return n & ~(1 << d)
@@ -113,8 +116,58 @@ public class BitTest {
     @Test
     public void testAdd() {
         int result = addExact(3,2);
-
-
         System.out.println("10진수:" + result + ", 2진수: " + Integer.toBinaryString(result));
     }
+
+    @Test
+    public void pow_positive_base21_exponent3_test() {
+        int base = 3;           // base of the logarithm
+        int exponent = 3;     // exponent times
+        // shift calculate 10 times test
+        for (int i = 0; i < exponent-1; i++) {
+            base = base << 1;  // it means 2 times of base...
+        }
+        log.debug("result!");
+    }
+
+    @Test
+    public void pow_positive_base2_exponent2_test() {
+        int base = 2;           // base of the logarithm
+        int exponent = 10;     // exponent times
+        // shift calculate 10 times test
+        for (int i = 0; i < exponent-1; i++) {
+            base = base << 1;
+        }
+        log.debug("result!");
+    }
+
+    @Test
+    public void pow_negative_base2_exponent2_test() {
+        int base = 2;           // base of the logarithm
+        int exponent = 2;     // exponent times
+        // /1/2^2
+        // shift calculate 10 times test
+        for (int i = 0; i < exponent-1; i++) {
+            base = base << 1;
+        }
+        // so this i can use for...
+        double rtn =  1.0 / base;
+        log.debug("result!: {}", rtn);
+    }
+
+
+
+    public double pow(double x, int n) {
+
+        // so double is not allowed to have shift okay
+
+        // if its int then easy just do it
+
+        // if its not then... seperate
+
+
+
+        return 0;
+    }
+
 }
