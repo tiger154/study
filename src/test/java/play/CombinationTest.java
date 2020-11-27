@@ -1,15 +1,30 @@
 package play;
 
 import com.jeonhwan.algorithm.sort.MergeSort;
+import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+/**
+ *  https://www.cs.sfu.ca/~ggbaker/zju/math/perm-comb-more.html#:~:text=If%20we%20are%20selecting%20an,%3D6%20and%20n%3D3.
+ *
+ * Basic formula
+ *
+ * 1) Permutation, Repetition(No)  : nPr
+ * 2) Permutation, Repetition(Yes) : n^r
+ * 3) Combination, Repetition(No)  : nCr
+ * 4) Combination, Repetition(Yes) : n+r-1Cr
+ *
+ *
+ * Generate all Combination length, Repetition(No) Σ nCr :  2^n
+ *
+ */
 public class CombinationTest {
 
-    private static Logger log = LoggerFactory.getLogger(MergeSort.class);
+    private static Logger log = LoggerFactory.getLogger(CombinationTest.class);
 
 
     /**
@@ -317,6 +332,238 @@ public class CombinationTest {
         CreateCombinations(focuses, 0, values);
 
         log.debug("hey");
+    }
+
+
+    //--------------------------------------------------------
+    // Three different algorithm for combination
+    //  link : https://shoark7.github.io/programming/algorithm/3-ways-to-get-binomial-coefficients#:~:text=%EC%9D%B4%ED%95%AD%EA%B3%84%EC%88%98(Binomial%20Coefficient)%EB%8A%94,%EB%A7%8C%EC%9D%B4%20%EC%9E%88%EA%B8%B0%20%EB%95%8C%EB%AC%B8%EC%9D%B4%EB%8B%A4.
+    //  link : https://shoark7.github.io/programming/algorithm/how-i-approach-algorithm-from-my-way
+    //--------------------------------------------------------
+
+
+    // 1. Basic Using factorial=> n! / (n-k)! / k!
+    public int factorial(int n) {
+        if (n <= 1) return 1;
+        int multiply = n;
+        for (int i = n-1 ; i > 0; i--) {
+            multiply = multiply * i;
+        }
+        return multiply;
+    }
+
+    public int bino_coef_factorial(int n, int r) {
+        return factorial(n) / factorial(r) / factorial(n-r);
+    }
+
+    @Test
+    public void bino_test() {
+        Assert.assertEquals(5, bino_coef_factorial(5,1));
+        Assert.assertEquals(10, bino_coef_factorial(5,2));
+        Assert.assertEquals(10, bino_coef_factorial(5,3));
+        Assert.assertEquals(5, bino_coef_factorial(5,4));
+        Assert.assertEquals(1, bino_coef_factorial(5,5));
+    }
+
+
+    @Test
+    public void factorial_test() {
+        Assert.assertEquals(1, factorial(0));
+        Assert.assertEquals(1, factorial(1));
+        Assert.assertEquals(2, factorial(2));
+        Assert.assertEquals(6, factorial(3));
+        Assert.assertEquals(24, factorial(4));
+        Assert.assertEquals(120, factorial(5));
+    }
+
+    // 2. Using 2 Concept together
+    // Given n,k if k is 0 or n == k is same then result is always '1'
+    // And
+    public int bino_coef(int n, int k) {
+        // if k == 0 or n == k same then return 1
+        if (k == 0 || n == k) {
+            return 1;
+        }
+        // formula is
+         return bino_coef(n-1, k-1) + bino_coef(n-1, k);
+    }
+
+    @Test
+    public void bino_coef_test() {
+        Assert.assertEquals(5, bino_coef(5,1));
+        Assert.assertEquals(10, bino_coef(5,2));
+        Assert.assertEquals(10, bino_coef(5,3));
+        Assert.assertEquals(5, bino_coef(5,4));
+        Assert.assertEquals(1, bino_coef(5,5));
+    }
+
+
+    @Test
+    public void bino_coef_memo_test() {
+
+
+        int n = 5;
+        int k = 3;
+        int[][] memo = new int[n+1][n+1];
+
+        Assert.assertEquals(5, bino_coef_memo(5,1, memo));
+        Assert.assertEquals(10, bino_coef_memo(5,2, memo));
+        Assert.assertEquals(10, bino_coef_memo(5,3, memo));
+        Assert.assertEquals(5, bino_coef_memo(5,4, memo));
+        Assert.assertEquals(1, bino_coef_memo(5,5, memo));
+
+
+    }
+
+
+
+    public int bino_coef_memo(int n, int k, int[][] memo) {
+        // if k == 0 or n == k same then return 1
+
+        if (memo[n][k] > 0) return memo[n][k];
+
+        if (k == 0 || n == k) {
+            return 1;
+        }
+        // formula is
+        return memo[n][k] = bino_coef(n-1, k-1) + bino_coef(n-1, k);
+    }
+
+
+    @Test
+    public void per_test() {
+
+
+        List<Integer> current = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        int[] arr = {1,2,3,4,5,6,7,8,9};
+        permutation(3, arr, current, result, new boolean[arr.length]);
+        log.debug("hey");
+    }
+
+    @Test
+    public void comb_test() {
+
+
+        List<Integer> current = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        int[] arr = {1,2,3};
+        permutation(3, arr, current, result, new boolean[arr.length]);
+        log.debug("hey");
+    }
+
+
+    public void permutation(int r, int[] arr, List<Integer> current, List<List<Integer>> result , boolean[] used) {
+        if ( r == current.size()) {
+            // stop
+            result.add(new ArrayList<>(current));
+            return;
+        }
+
+        for(int i = 0; i < arr.length; i++)  {
+
+            if (used[i]) continue;
+
+            used[i] = true;
+            current.add(arr[i]);
+
+            permutation(r, arr, current, result, used);
+
+            used[i] = false;
+            current.remove(current.size()-1); // backtrack
+
+        }
+    }
+
+
+    @Test
+    public void get_all_substring_test() {
+
+        //get_all_substring("abc");
+        Assert.assertEquals("wke", longest_substring("pwwkew"));
+        Assert.assertEquals("abc", longest_substring("abcabcbb"));
+        Assert.assertEquals("b", longest_substring("bbbbb"));
+
+
+    }
+
+    /**
+     * Idea: brute_force
+     *
+     *   - 1) Generating all substring (inner for loop)
+     *   - 2) Check if its valid substring(No duplicate allowed)
+     *   - 3) Compare Max substring each time and replace it if needed it
+     *
+     *
+     * @return
+     */
+    public int longest_substring(String s) {
+        // Edge cases
+        if (s.length() == 0) return 0;
+        if (s.length() == 1) return 1;
+
+        // 1. Generate all with for loopo
+        String max_sub_str = s.substring(0,1);
+
+        for (int i=0; i <s.length(); i++) {
+            for (int j=i+1; j <= s.length(); j++) {
+                String substr = s.substring(i, j);
+                // 2. Check if its valid substring(No duplicate allowed)
+                if (!is_duplicate_exist(substr)) {
+                    // 3. Compare Max substring each time and replace it if needed it
+                    if (max_sub_str.length() < substr.length()) max_sub_str = substr;
+                }
+                //log.debug("substring print: {}", substr);
+            }
+        }
+        return max_sub_str.length();
+    }
+
+
+    @Test
+    public void test_dup() {
+        Assert.assertFalse(is_duplicate_exist("p"));
+        Assert.assertFalse(is_duplicate_exist("pw"));
+        Assert.assertTrue(is_duplicate_exist("pww"));
+        Assert.assertTrue(is_duplicate_exist("pwwk"));
+        Assert.assertTrue(is_duplicate_exist("pwwke"));
+
+        Assert.assertTrue(is_duplicate_exist("pwkwe"));
+
+    }
+
+
+    /**
+     * Comparing sequence manner
+     * @param s
+     * @return
+     */
+    public boolean is_duplicate_exist(String s) {
+        if (s.length() <= 1) return false;
+        Set<Character> set = new HashSet<>();
+        for (Character chr : s.toCharArray()) set.add(chr);
+        return (set.size() != s.length() );
+    }
+
+    /**
+     * Comparing sequence manner
+     * @param s
+     * @return
+     */
+    public boolean is_duplicate_exist_sequence(String s) {
+        if (s.length() <= 1) return false;
+
+        Set<Character> set = new HashSet<>();
+        Character prev_chr = null;
+
+        for (Character chr : s.toCharArray()) {
+            // If first just skip it
+            if (prev_chr == null && prev_chr == chr) return true;
+            // swap
+            set.add(chr);
+            prev_chr = chr;
+        }
+        return (set.size() != s.length() );
     }
 
 
